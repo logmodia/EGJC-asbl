@@ -1,0 +1,9 @@
+.nav-h{
+    border : 1px solid red;
+    &_item-container{
+        border : 1px solid black;
+        &_item{
+            display : inline-block;
+        }
+    }
+}
