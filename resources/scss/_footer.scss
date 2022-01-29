@@ -1,0 +1,23 @@
+.footer{
+    display: flex;
+    background-color : $color-darkOrange;
+    color : white;
+    //gap : 50px;
+
+    justify-content : space-evenly;
+
+    &_mainBlocks{//horaire  and contacts
+        h3{
+            color : $color-orange;
+            font-size : $h3;
+        }
+    }
+
+    &_containerHoraire{
+        &_blockJour{
+            display : grid;
+            grid-template-columns: auto auto auto;
+            gap : 50px;
+        }
+    }
+}

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>EGJC asbl | Home</title>
+        <title>EGJC | Home</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yanone Kaffeesatz|Exo 2|Teko|Sofia|Tangerine">
@@ -20,5 +20,6 @@
     <body>
        @include("layouts.partials.header")
        @yield("content")
+       @include("layouts.partials.footer")
     </body>
 </html>

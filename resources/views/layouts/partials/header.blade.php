@@ -14,7 +14,7 @@
                 <li class="nav-h_item-container_item"><a href="#">Faire un don</a></li>
                 <li class="nav-h_item-container_item"><a href="#">Nous contacter</a></li>
                 <li class="nav-h_item-container_item"><a href="#">Nous contacter</a></li>
-                <li class="nav-h_item-container_item"><a href="#">Gestion</a></li>
+                <li class="nav-h_item-container_item"><a href="{{ url('/dashboard') }}">Gestion</a></li>
     </div>
 
 </div>
