@@ -1,9 +1,6 @@
-.nav-h{
-    border : 1px solid red;
-    &_item-container{
-        border : 1px solid black;
-        &_item{
-            display : inline-block;
-        }
-    }
+@import  '_variables';
+body{
+    font-family: $font-yonane, sans-serif;
 }
+@import  '_header';
+

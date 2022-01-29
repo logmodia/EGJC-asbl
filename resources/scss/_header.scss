@@ -1,0 +1,107 @@
+.nav-h{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+
+    &_logoContainer{
+        padding-right : 50px;
+        &_logo{
+            max-width :80px;
+            max-height :80px;
+        }
+    }
+
+    &_item-container{
+        &_item{
+            display : inline-block;
+            font-size : 1.2rem;
+            padding: 1px;
+
+            a {
+                padding : 8px;
+            }
+
+            a:hover{
+               background-color : $color-darkPurple;
+                color : white;
+                font-weight: bold;
+
+                border-radius : 5px;
+            }
+        }
+    }
+}
+
+.bannerHeader{
+    position: relative;
+
+    &_containerTitle{
+        max-width: 40%;
+        text-align: center;
+        display : flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+
+        padding-top: 80px;
+
+        &_h1{
+            color : $color-txt-orange;
+            font-family: $font-teko, sans-serif;
+            font-weight:  bold;
+            font-size : 5rem;
+            padding:  0;
+        }
+        &_h5{
+            color : rgb(218, 213, 213);
+            font-weight:  bold;
+            font-size : 1.5rem;
+            padding-bottom: 5px;
+            font-family: $font-teko, sans-serif;
+            word-spacing: 1px;
+        }
+        &_bibleImg{
+            max-width: 50px;
+            max-height: 50px;
+        }
+        &_verse{
+            color : rgb(218, 213, 213);
+            font-size:  1rem;
+            font-weight:  bold;
+            padding : 10px;
+        }
+    }
+
+    &_container-Trapeze{
+        z-index: -2;
+        position: absolute;
+        left: 0;
+        top : 0;
+        width: 100%;
+        &_purpleTrapeze{
+           width : 60%;
+            object-fit: cover;
+            animation: 4s reverse changeWidth;
+        }
+    }
+
+    &_container-bgImg{
+        z-index: -3;
+            position: absolute;
+            top : 0;
+            left : 0;
+            width: 100%;
+            
+        &_photo{
+            width : 1600px;
+            object-fit: cover;
+        }
+    }
+
+}
+
+@keyframes changeWidth {
+    from {width: 60%;}
+    to {width: 100%;}
+  }

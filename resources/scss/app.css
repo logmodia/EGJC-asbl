@@ -1,0 +1,142 @@
+body {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.nav-h {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-h_logoContainer {
+  padding-right: 50px;
+}
+
+.nav-h_logoContainer_logo {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.nav-h_item-container_item {
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 1px;
+}
+
+.nav-h_item-container_item a {
+  padding: 8px;
+}
+
+.nav-h_item-container_item a:hover {
+  background-color: #500250;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.bannerHeader {
+  position: relative;
+}
+
+.bannerHeader_containerTitle {
+  max-width: 40%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1;
+  padding-top: 80px;
+}
+
+.bannerHeader_containerTitle_h1 {
+  color: #ffac05;
+  font-family: "Teko", sans-serif;
+  font-weight: bold;
+  font-size: 5rem;
+  padding: 0;
+}
+
+.bannerHeader_containerTitle_h5 {
+  color: #dad5d5;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+  font-family: "Teko", sans-serif;
+  word-spacing: 1px;
+}
+
+.bannerHeader_containerTitle_bibleImg {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.bannerHeader_containerTitle_verse {
+  color: #dad5d5;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.bannerHeader_container-Trapeze {
+  z-index: -2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.bannerHeader_container-Trapeze_purpleTrapeze {
+  width: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  animation: 4s reverse changeWidth;
+}
+
+.bannerHeader_container-bgImg {
+  z-index: -3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.bannerHeader_container-bgImg_photo {
+  width: 1600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@-webkit-keyframes changeWidth {
+  from {
+    width: 60%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes changeWidth {
+  from {
+    width: 60%;
+  }
+  to {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=app.css.map */
