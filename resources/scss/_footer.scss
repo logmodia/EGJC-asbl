@@ -1,23 +1,79 @@
 .footer{
+    width : 100%;
     display: flex;
     background-color : $color-darkOrange;
     color : white;
-    //gap : 50px;
+    padding: 20px 10px 50px 10px;
+    justify-content : center;
+    gap : 200px;
 
-    justify-content : space-evenly;
+    p{
+        font-size : $p5;
+    }
 
     &_mainBlocks{//horaire  and contacts
         h3{
-            color : $color-orange;
-            font-size : $h3;
+            padding : 30px;
         }
     }
 
-    &_containerHoraire{
-        &_blockJour{
+    &_ScheduleContainer{
+        
+        &_dayBlock{
             display : grid;
             grid-template-columns: auto auto auto;
             gap : 50px;
+            grid-auto-flow:  dense;
+
+            &_day{
+
+                &_dayName{
+                    font-weight : bold;
+                    color:  $color-orange;
+                    margin-bottom : 10px;border-bottom: 1px solid white;
+                }
+
+            }
+
+            .dimanche{
+                order : 1;
+            }
+            .lundi{
+                order : 2;
+            }
+            .mercredi{
+                order : 3;
+            }
+            .vendredi{
+                order : 4;
+            }
+            .samedi{
+                order : 5;
+            }
         }
     }
+
+    &_contactContainer{
+
+        &_contactBlock{
+            &_contact{
+                display : inline-block;
+                margin-left  : 10px;
+            }
+
+            &_socialMedia{
+                padding-top : 60px;
+                color : $color-orange;
+            }
+        }
+    }
+}
+
+.fab{
+    font-size : 30px;
+    padding : 15px 20px 0px 0px;
+    color : rgb(212, 209, 209);
+}
+.fas, .far{
+    color : rgb(212, 209, 209);
 }

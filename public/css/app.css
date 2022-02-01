@@ -2,6 +2,25 @@ body {
   font-family: "Yanone Kaffeesatz", sans-serif;
 }
 
+.h_2 {
+  color: #fdaa05;
+  font-size: calc(2.5rem + 0.7vw);
+  text-align: center;
+}
+
+.title-h2 {
+  color: #fdaa05;
+  font-size: calc(2.5rem + 0.7vw);
+  font-weight: bold;
+  text-align: center;
+  padding: 50px 0px 50px 0px;
+}
+
+.h_3 {
+  color: #fdaa05;
+  font-size: calc(1rem + 1vw);
+}
+
 .nav-h {
   display: flex;
   justify-content: center;
@@ -23,7 +42,7 @@ body {
   padding: 8px;
 }
 .nav-h_item-container_item a:hover {
-  background-color: #500250;
+  background-color: #512651;
   color: white;
   font-weight: bold;
   border-radius: 5px;
@@ -31,7 +50,10 @@ body {
 
 .bannerHeader {
   position: relative;
-  height: 600px;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  margin-bottom: 0px;
 }
 .bannerHeader_containerTitle {
   max-width: 40%;
@@ -42,14 +64,14 @@ body {
   align-items: center;
   line-height: 1;
   padding-top: 80px;
-  max-height: 600px;
+  max-height: 800px;
 }
 .bannerHeader_containerTitle_h1 {
-  color: #ffac05;
+  color: #da9305;
   font-family: "Teko", sans-serif;
   font-weight: bold;
   font-size: calc(4rem + 0.7vw);
-  max-height: 600px;
+  max-height: 800px;
 }
 .bannerHeader_containerTitle_h5 {
   color: #dad5d5;
@@ -75,7 +97,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  max-height: 600px;
+  max-height: 100vh;
 }
 .bannerHeader_container-Trapeze_purpleTrapeze {
   -o-object-fit: cover;
@@ -105,7 +127,7 @@ body {
   }
   to {
     width: 100%;
-    height: 600px;
+    height: 700px;
   }
 }
 
@@ -115,23 +137,174 @@ body {
   }
   to {
     width: 100%;
-    height: 600px;
+    height: 700px;
   }
 }
+.about {
+  position: relative;
+  padding-bottom: 5rem;
+  margin-top: 255px;
+}
+.about_bgImg-Container {
+  margin: 0 auto;
+  width: 80%;
+  max-height: 600px;
+}
+.about_bgImg-Container_image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-height: 600px;
+  border-radius: 10px;
+}
+.about_textContainer {
+  margin: 0 auto;
+  font-size: calc(1rem + 0.7vw);
+  text-align: center;
+  color: white;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+.about::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 900px;
+  bottom: 0;
+  left: 0;
+  background: #512651;
+  z-index: -1;
+  -webkit-animation: 3s infinite alternate changeSize;
+          animation: 3s infinite alternate changeSize;
+}
+
+.values_containerBox {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 0px 30px 80px 30px;
+}
+.values_containerBox_valueCard {
+  background-color: #fdaa05;
+  text-align: center;
+  width: 250px;
+}
+.values_containerBox_valueCard img {
+  margin: 30px auto;
+  width: 100px;
+  height: 110px;
+}
+.values_containerBox_valueCard_valueTitle {
+  background-color: #512651;
+  color: white;
+  font-size: calc(1rem + 0.5vw);
+  padding: 5px;
+  border-bottom: 1px solid white;
+}
+.values_containerBox_valueCard_verse {
+  font-size: calc(0.8rem + 0.5vw);
+}
+.values_containerBox_valueCard .verse_p2 {
+  padding: 0px 0px 30px 0px;
+}
+
+.yearVision {
+  display: flex;
+  background-color: #141003;
+  margin: 30px auto;
+}
+.yearVision_textBox {
+  font-family: "Exo 2", sans-serif;
+  font-weight: large;
+}
+.yearVision_textBox_title {
+  color: white;
+}
+.yearVision_textBox_h3-year {
+  color: #da9305;
+  font-size: calc(1rem + 1vw);
+}
+.yearVision_textBox_h3-title {
+  color: #da9305;
+  font-size: calc(4rem + 0.7vw);
+}
+
+.savoir-plus {
+  color: white;
+  font-size: calc(1rem + 0.7vw);
+  background-color: #d89205;
+  padding: 15px;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
+.mask-img {
+  -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+          mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+}
+
 .footer {
+  width: 100%;
   display: flex;
   background-color: #141003;
   color: white;
-  justify-content: space-evenly;
+  padding: 20px 10px 50px 10px;
+  justify-content: center;
+  gap: 200px;
+}
+.footer p {
+  font-size: calc(0.8rem + 0.5vw);
 }
 .footer_mainBlocks h3 {
-  color: #ffac05;
-  font-size: calc(1rem + 1vw);
+  padding: 30px;
 }
-.footer_containerHoraire_blockJour {
+.footer_ScheduleContainer_dayBlock {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 50px;
+  grid-auto-flow: dense;
+}
+.footer_ScheduleContainer_dayBlock_day_dayName {
+  font-weight: bold;
+  color: #fdaa05;
+  margin-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+.footer_ScheduleContainer_dayBlock .dimanche {
+  order: 1;
+}
+.footer_ScheduleContainer_dayBlock .lundi {
+  order: 2;
+}
+.footer_ScheduleContainer_dayBlock .mercredi {
+  order: 3;
+}
+.footer_ScheduleContainer_dayBlock .vendredi {
+  order: 4;
+}
+.footer_ScheduleContainer_dayBlock .samedi {
+  order: 5;
+}
+.footer_contactContainer_contactBlock_contact {
+  display: inline-block;
+  margin-left: 10px;
+}
+.footer_contactContainer_contactBlock_socialMedia {
+  padding-top: 60px;
+  color: #fdaa05;
+}
+
+.fab {
+  font-size: 30px;
+  padding: 15px 20px 0px 0px;
+  color: #d4d1d1;
+}
+
+.fas, .far {
+  color: #d4d1d1;
 }
 /*
 ! tailwindcss v3.0.17 | MIT License | https://tailwindcss.com

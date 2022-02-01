@@ -11,6 +11,9 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yanone Kaffeesatz|Exo 2|Teko|Sofia|Tangerine">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
+        <!-- Fontawesome icon -->
+        <script src="https://kit.fontawesome.com/907e656b57.js" crossorigin="anonymous"></script>
+
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 

@@ -1,7 +1,8 @@
 $color-txt-gray : #8f8d8f;
-$color-orange : #ffac05;
-$color-txt-orange : #ffac05;
-$color-darkPurple : #500250;
+$color-orange : #fdaa05;
+$color-darkOrange-1 : #d89205;
+$color-txt-orange : #da9305;
+$color-darkPurple : #512651;
 $color-darkOrange : #141003;
 
 //Fonts -----------------------------------------
@@ -11,5 +12,10 @@ $font-teko : 'Teko';
 
 //Font sizes ----------------------------------
 $h1 : calc(4rem + 0.7vw);
+$h2 : calc(2.5rem + 0.7vw);
 $h3 : calc(1rem + 1vw);
 $h5 : calc(1rem + 0.5vw);
+
+//p text --------------------------------
+$p3 : calc(1rem + 0.7vw);
+$p5 : calc(0.8rem + 0.5vw);

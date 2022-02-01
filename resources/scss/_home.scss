@@ -1,0 +1,116 @@
+.about {
+    position: relative;
+    padding-bottom: 5rem;
+    margin-top:  255px;
+
+    &_bgImg-Container{
+      margin : 0 auto;
+      width: 80%;
+      max-height : 600px;
+
+      &_image{
+        object-fit: cover;
+        width: 100%;
+        max-height: 600px;
+        border-radius: 10px;
+      }
+
+    }
+    &_textContainer{
+      margin : 0 auto;
+      font-size : $p3;
+      text-align: center;
+      color: white;
+      padding : 30px;
+      margin-top: 50px;
+
+    }
+
+  }
+  .about::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 900px;
+    bottom: 0;
+    left: 0;
+    background: $color-darkPurple;
+    z-index: -1;
+    animation: 3s infinite alternate changeSize;
+  }
+
+  .values{
+
+    &_containerBox{
+      margin : 0 auto;
+      display : flex;
+      flex-wrap : wrap;
+      justify-content: center;
+      gap : 50px;
+      padding: 0px 30px 80px 30px;
+
+      &_valueCard{
+        background-color: $color-orange;
+        text-align: center;
+        width: 250px;
+
+        img{
+          margin : 30px auto;
+          width : 100px;
+          height : 110px;
+        }
+
+        &_valueTitle{
+          background-color: $color-darkPurple;
+          color: white;
+          font-size: $h5;
+          padding : 5px;
+          border-bottom: 1px solid white;
+        }
+        &_verse{
+          font-size: $p5;
+        }
+
+        .verse_p2{
+          padding: 0px 0px 30px 0px;
+        }
+
+      }
+    }
+  }
+
+  .yearVision{
+    display : flex;
+    background-color : $color-darkOrange;
+    margin : 30px auto;
+
+    &_textBox{
+      font-family : $font-exo2, sans-serif;
+      font-weight : large;
+
+      &_title{
+        color : white;
+      }
+      &_h3-year{
+        color : $color-txt-orange;
+        font-size : $h3;
+      }
+      &_h3-title{
+        color : $color-txt-orange;
+        font-size : calc(4rem + 0.7vw);
+      }
+    }
+  }
+
+  .savoir-plus {
+    color: white;
+    font-size : $p3;
+    background-color: $color-darkOrange-1;
+    padding : 15px;
+    margin-top : 50px;
+    border-radius : 10px;
+  }
+
+  .mask-img{
+    mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+  }
