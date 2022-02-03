@@ -53,6 +53,7 @@
         background-color: $color-orange;
         text-align: center;
         width: 250px;
+        border-radius : 20px 20px 3px 3px;
 
         img{
           margin : 30px auto;
@@ -66,6 +67,7 @@
           font-size: $h5;
           padding : 5px;
           border-bottom: 1px solid white;
+          border-radius : 20px 20px 0px 0px;
         }
         &_verse{
           font-size: $p5;
@@ -81,25 +83,208 @@
 
   .yearVision{
     display : flex;
+    justify-content: center;
     background-color : $color-darkOrange;
-    margin : 30px auto;
+    margin : 0px auto;
+    max-height : 600px;
+
+    &_img{
+      object-fit: cover;
+      width: 50%;
+      max-height : 600px;
+    }
 
     &_textBox{
       font-family : $font-exo2, sans-serif;
-      font-weight : large;
+      font-weight : bolder;
+      width: 50%;
 
       &_title{
         color : white;
+        text-align : left;
+        margin-bottom: 50px;
       }
       &_h3-year{
         color : $color-txt-orange;
-        font-size : $h3;
+        font-size : $h2;
+        margin-left: 50px;
+        line-height: 1;
       }
       &_h3-title{
         color : $color-txt-orange;
-        font-size : calc(4rem + 0.7vw);
+        font-size : calc(5rem + 0.7vw);
+        margin-left: 100px;
       }
     }
+  }
+
+  .news{
+    background-color : $color-bgGray;
+    padding-bottom: 100px;
+
+    &_sectionTitle{
+      color: black;
+    }
+
+    &_containerBox{
+      display : flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 30px;
+
+      &_newsCard{
+        
+        &_newsType{
+          color: black;
+          font-size: $h4;
+        }
+
+        &_item{
+          background-color : $color-light_bgGray;
+          padding : 10px;
+          max-height : 210px;
+          border-radius : 3px;
+
+          &_newsTitle{
+            font-size: $h5;
+            color : $color-txt-orange;
+            padding : 5px 0px 5px 0px;
+          }
+
+          &_textBox{
+            padding : 5px 10px 10px 0px;
+
+            &_statement{
+              max-height: 70px;
+            }
+  
+            &_signature{
+              padding : 10px 100px 0px 0px;
+              text-align: right;
+            }
+          }
+
+          &_btnContainer{
+            text-align: right;
+            padding-bottom: 5px;
+            &_voir-plus{
+              background-color : $color-darkOrange-1;
+              padding : 1px;
+              width:  80px;
+              border-radius : 5px;
+              color : white;
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+
+  .week-schedule{
+    margin-bottom : 50px;
+    //background-color : rgb(247, 245, 245);
+
+    &_cardContainer{
+      display : flex;
+      flex-wrap : wrap;
+      justify-content : space-evenly;
+      gap: 30px;
+      padding : 5px;
+
+      &_card{
+        text-align: center;
+        border : 1px solid $color-bgGray;
+        border-radius : 3px;
+        box-shadow: 3px 3px 5px gray;
+        padding : 5px;
+
+        &_imgBox{
+          margin : 0px auto;
+          border-radius: 50%;
+          overflow : hidden;
+          width : 250px;
+          height : 250px;
+          
+          &_img{
+            object-fit : cover;
+            width : 100%;
+            height : 100%;
+          }
+
+        }
+
+        &_dayName{
+          color : $color-txt-gray;
+          font-size : $h5;
+          padding-top: 20px;
+        }
+
+        &_hour-activity{
+          &_hour{
+            font-size : $p5;
+            color : $color-txt-orange;
+          }
+          &_activity{
+            font-size : $p5;
+            color : $color-txt-gray;
+            padding-top: 10px;
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .nextEvent{
+    position : relative;
+    margin-bottom: 0px;
+    background-image: url("../../public/storage/assets/eglise_1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 100vmax $color-rgba_darkPurple-1;
+    
+    &_eventContainer{
+      display : flex;
+      flex-wrap: wrap;
+      justify-content : space-evenly;
+      gap: 10px;
+      padding : 0px 0px 100px 0px;
+      
+      &_event{
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        background-color: $color-rgba_darkOrange-1;
+        color : white;
+        text-align: center;
+        align-items : center;
+        padding : 130px 0px 100px 0px;
+
+          &_title{
+            font-size: $h3;
+          }
+          &_date{
+            font-size: $p3;
+          }
+
+      }
+
+    }
+  }
+
+  .sec-map{
+    margin-bottom: 50px;
+    padding : 0px 30px 0px 30px;
+
+    &_map{
+      width: 100%;
+      height : 500px;
+    }
+
   }
 
   .savoir-plus {

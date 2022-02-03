@@ -1,9 +1,14 @@
-$color-txt-gray : #8f8d8f;
+$color-txt-gray : #797879;
+$color-bgGray : #cacdce;
+$color-light_bgGray : #e5e6e7;
 $color-orange : #fdaa05;
 $color-darkOrange-1 : #d89205;
 $color-txt-orange : #da9305;
 $color-darkPurple : #512651;
 $color-darkOrange : #141003;
+$color-rgba_darkOrange : rgba(20, 16, 3, .9);
+$color-rgba_darkOrange-1 : rgba(250, 169, 6, .3);
+$color-rgba_darkPurple-1 : rgba(48, 5, 48, .9);
 
 //Fonts -----------------------------------------
 $font-yonane : 'Yanone Kaffeesatz';
@@ -14,7 +19,8 @@ $font-teko : 'Teko';
 $h1 : calc(4rem + 0.7vw);
 $h2 : calc(2.5rem + 0.7vw);
 $h3 : calc(1rem + 1vw);
-$h5 : calc(1rem + 0.5vw);
+$h4 : calc(0.8rem + 0.8vw);
+$h5 : calc(0.8rem + 0.6vw);
 
 //p text --------------------------------
 $p3 : calc(1rem + 0.7vw);

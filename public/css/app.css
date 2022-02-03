@@ -76,7 +76,7 @@ body {
 .bannerHeader_containerTitle_h5 {
   color: #dad5d5;
   font-weight: bold;
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(0.8rem + 0.6vw);
   padding-bottom: 5px;
   font-family: "Teko", sans-serif;
   word-spacing: 3px;
@@ -191,6 +191,7 @@ body {
   background-color: #fdaa05;
   text-align: center;
   width: 250px;
+  border-radius: 20px 20px 3px 3px;
 }
 .values_containerBox_valueCard img {
   margin: 30px auto;
@@ -200,9 +201,10 @@ body {
 .values_containerBox_valueCard_valueTitle {
   background-color: #512651;
   color: white;
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(0.8rem + 0.6vw);
   padding: 5px;
   border-bottom: 1px solid white;
+  border-radius: 20px 20px 0px 0px;
 }
 .values_containerBox_valueCard_verse {
   font-size: calc(0.8rem + 0.5vw);
@@ -213,23 +215,174 @@ body {
 
 .yearVision {
   display: flex;
+  justify-content: center;
   background-color: #141003;
-  margin: 30px auto;
+  margin: 0px auto;
+  max-height: 600px;
+}
+.yearVision_img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50%;
+  max-height: 600px;
 }
 .yearVision_textBox {
   font-family: "Exo 2", sans-serif;
-  font-weight: large;
+  font-weight: bolder;
+  width: 50%;
 }
 .yearVision_textBox_title {
   color: white;
+  text-align: left;
+  margin-bottom: 50px;
 }
 .yearVision_textBox_h3-year {
   color: #da9305;
-  font-size: calc(1rem + 1vw);
+  font-size: calc(2.5rem + 0.7vw);
+  margin-left: 50px;
+  line-height: 1;
 }
 .yearVision_textBox_h3-title {
   color: #da9305;
-  font-size: calc(4rem + 0.7vw);
+  font-size: calc(5rem + 0.7vw);
+  margin-left: 100px;
+}
+
+.news {
+  background-color: #cacdce;
+  padding-bottom: 100px;
+}
+.news_sectionTitle {
+  color: black;
+}
+.news_containerBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+.news_containerBox_newsCard_newsType {
+  color: black;
+  font-size: calc(0.8rem + 0.8vw);
+}
+.news_containerBox_newsCard_item {
+  background-color: #e5e6e7;
+  padding: 10px;
+  max-height: 210px;
+  border-radius: 3px;
+}
+.news_containerBox_newsCard_item_newsTitle {
+  font-size: calc(0.8rem + 0.6vw);
+  color: #da9305;
+  padding: 5px 0px 5px 0px;
+}
+.news_containerBox_newsCard_item_textBox {
+  padding: 5px 10px 10px 0px;
+}
+.news_containerBox_newsCard_item_textBox_statement {
+  max-height: 70px;
+}
+.news_containerBox_newsCard_item_textBox_signature {
+  padding: 10px 100px 0px 0px;
+  text-align: right;
+}
+.news_containerBox_newsCard_item_btnContainer {
+  text-align: right;
+  padding-bottom: 5px;
+}
+.news_containerBox_newsCard_item_btnContainer_voir-plus {
+  background-color: #d89205;
+  padding: 1px;
+  width: 80px;
+  border-radius: 5px;
+  color: white;
+}
+
+.week-schedule {
+  margin-bottom: 50px;
+}
+.week-schedule_cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 5px;
+}
+.week-schedule_cardContainer_card {
+  text-align: center;
+  border: 1px solid #cacdce;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px gray;
+  padding: 5px;
+}
+.week-schedule_cardContainer_card_imgBox {
+  margin: 0px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+}
+.week-schedule_cardContainer_card_imgBox_img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.week-schedule_cardContainer_card_dayName {
+  color: #797879;
+  font-size: calc(0.8rem + 0.6vw);
+  padding-top: 20px;
+}
+.week-schedule_cardContainer_card_hour-activity_hour {
+  font-size: calc(0.8rem + 0.5vw);
+  color: #da9305;
+}
+.week-schedule_cardContainer_card_hour-activity_activity {
+  font-size: calc(0.8rem + 0.5vw);
+  color: #797879;
+  padding-top: 10px;
+}
+
+.nextEvent {
+  position: relative;
+  margin-bottom: 0px;
+  background-image: url(/images/eglise_1.jpg?41ae8f203d36f4a9c8549426f0b86291);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 100vmax rgba(48, 5, 48, 0.9);
+}
+.nextEvent_eventContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+  padding: 0px 0px 100px 0px;
+}
+.nextEvent_eventContainer_event {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: rgba(250, 169, 6, 0.3);
+  color: white;
+  text-align: center;
+  align-items: center;
+  padding: 130px 0px 100px 0px;
+}
+.nextEvent_eventContainer_event_title {
+  font-size: calc(1rem + 1vw);
+}
+.nextEvent_eventContainer_event_date {
+  font-size: calc(1rem + 0.7vw);
+}
+
+.sec-map {
+  margin-bottom: 50px;
+  padding: 0px 30px 0px 30px;
+}
+.sec-map_map {
+  width: 100%;
+  height: 500px;
 }
 
 .savoir-plus {
