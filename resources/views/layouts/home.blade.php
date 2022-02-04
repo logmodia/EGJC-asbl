@@ -280,7 +280,7 @@
 
     <section class="sec-map">
       <h2 class = "title-h2">Nous rejoindre</h2>
-      <iframe class="sec-map_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2530.872060269354!2d5.587449115434523!3d50.629493482329245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0f1b319dfb54b%3A0x98faaff0eb434aaf!2s%C3%89glise%20Glorieuse%20de%20J%C3%A9sus%20Christ!5e0!3m2!1sfr!2sbe!4v1643929524141!5m2!1sfr!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe class="sec-map_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2530.872060269354!2d5.587449115434523!3d50.629493482329245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0f1b319dfb54b%3A0x98faaff0eb434aaf!2s%C3%89glise%20Glorieuse%20de%20J%C3%A9sus%20Christ!5e0!3m2!1sfr!2sbe!4v1643929524141!5m2!1sfr!2sbe" width="600" height="450" style="border:0;" name ="map" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
 @endsection

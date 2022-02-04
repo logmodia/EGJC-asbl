@@ -13,7 +13,7 @@ body {
   font-size: calc(2.5rem + 0.7vw);
   font-weight: bold;
   text-align: center;
-  padding: 50px 0px 50px 0px;
+  padding: 40px 0px 40px 0px;
 }
 
 .h_3 {
@@ -48,79 +48,139 @@ body {
   border-radius: 5px;
 }
 
+/* .bannerHeader{
+    position: relative;
+    max-height: fit-content;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 600px;
+    max-height: 600px;
+
+    &_containerTitle{
+        max-width: 40%;
+        text-align: center;
+        display : flex;
+        position: absolute;
+        left: 0;
+        top : 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        padding-top: 80px;
+        max-height: 600px;
+
+        &_h1{
+            color : $color-txt-orange;
+            font-family: $font-teko, sans-serif;
+            font-weight:  bold;
+            font-size : $h1;
+            max-height: 600px;
+        }
+        &_h5{
+            color : rgb(218, 213, 213);
+            font-weight:  bold;
+            font-size : $h5;
+            padding-bottom: 5px;
+            font-family: $font-teko, sans-serif;
+            word-spacing: 3px;
+        }
+        &_bibleImg{
+            max-width: 50px;
+            max-height: 50px;
+        }
+        &_verse{
+            color : rgb(218, 213, 213);
+            font-size:  calc(0.5rem + 0.5vw);
+            font-weight:  bold;
+            padding : 10px;
+        }
+    }
+
+    //Purple banner trapeze --------------------------
+    &_container-Trapeze{
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        top : 0;
+        width: 100%;
+        max-height: 600px;
+
+        &_purpleTrapeze{
+            object-fit: cover;
+            width: 60%;
+            max-height: 600px;
+            animation: 4s reverse changeWidth;
+        }
+    }
+
+    //Photo banner background -----------------
+    &_container-bgImg{
+        z-index: -2;
+        //position: absolute;
+        top : 0;
+        left : 0;
+        width: 100%;
+
+        &_photo{
+            width : 100%;
+            max-height: 600px;
+            object-fit: cover;
+        }
+    }
+
+    //Title of the current page ---------------------
+
+    &_pageTitle-box{
+        position : absolute;
+        top : 0;
+        left : 0;
+        z-index: 1;
+        border: 3px solid yellow;
+        display : flex;
+        justify-content: flex-end;
+        align-items: center;
+        width : 100%;
+        padding : 0px 50px 0px 50px;
+        height: 600vh;
+        max-height: 600px;
+
+        &_titleContainer{
+            width : 300px;
+            height : 300px;
+            border-radius: 50%;
+            background-color: white;
+        }
+    }
+} */
 .bannerHeader {
   position: relative;
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
-  margin-bottom: 0px;
+  isolation: isolate;
+  border: 3px solid red;
+  z-index: 0;
 }
 .bannerHeader_containerTitle {
-  max-width: 40%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
-  padding-top: 80px;
-  max-height: 800px;
+  z-index: 3;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
 }
-.bannerHeader_containerTitle_h1 {
-  color: #da9305;
-  font-family: "Teko", sans-serif;
-  font-weight: bold;
-  font-size: calc(4rem + 0.7vw);
-  max-height: 800px;
-}
-.bannerHeader_containerTitle_h5 {
-  color: #dad5d5;
-  font-weight: bold;
-  font-size: calc(0.8rem + 0.6vw);
-  padding-bottom: 5px;
-  font-family: "Teko", sans-serif;
-  word-spacing: 3px;
-}
-.bannerHeader_containerTitle_bibleImg {
-  max-width: 50px;
-  max-height: 50px;
-}
-.bannerHeader_containerTitle_verse {
-  color: #dad5d5;
-  font-size: calc(0.5rem + 0.5vw);
-  font-weight: bold;
-  padding: 10px;
+.bannerHeader_containerTitle img {
+  max-width: 4rem;
 }
 .bannerHeader_container-Trapeze {
-  z-index: -1;
+  z-index: 2;
   position: absolute;
-  left: 0;
   top: 0;
-  width: 100%;
-  max-height: 100vh;
-}
-.bannerHeader_container-Trapeze_purpleTrapeze {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 60%;
-  max-height: 600px;
-  animation: 4s reverse changeWidth;
+  left: 0;
 }
 .bannerHeader_container-bgImg {
-  z-index: -2;
-  position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
-  max-height: 600px;
+  height: 100%;
 }
-.bannerHeader_container-bgImg_photo {
-  width: 100%;
-  max-height: 600px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 @-webkit-keyframes changeWidth {
   from {
     width: 60%;
@@ -130,7 +190,6 @@ body {
     height: 700px;
   }
 }
-
 @keyframes changeWidth {
   from {
     width: 60%;
@@ -143,7 +202,6 @@ body {
 .about {
   position: relative;
   padding-bottom: 5rem;
-  margin-top: 255px;
 }
 .about_bgImg-Container {
   margin: 0 auto;
@@ -184,8 +242,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
-  padding: 0px 30px 80px 30px;
+  gap: 35px;
+  padding: 0px 40px 80px 40px;
 }
 .values_containerBox_valueCard {
   background-color: #fdaa05;
@@ -250,7 +308,7 @@ body {
 
 .news {
   background-color: #cacdce;
-  padding-bottom: 100px;
+  padding: 0px 40px 100px 40px;
 }
 .news_sectionTitle {
   color: black;
@@ -258,8 +316,8 @@ body {
 .news_containerBox {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 35px;
 }
 .news_containerBox_newsCard_newsType {
   color: black;
@@ -304,9 +362,9 @@ body {
 .week-schedule_cardContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 30px;
-  padding: 5px;
+  padding: 0px 40px 0px 40px;
 }
 .week-schedule_cardContainer_card {
   text-align: center;
@@ -378,7 +436,7 @@ body {
 
 .sec-map {
   margin-bottom: 50px;
-  padding: 0px 30px 0px 30px;
+  padding: 0px 40px 0px 40px;
 }
 .sec-map_map {
   width: 100%;

@@ -32,28 +32,34 @@
     }
 }
 
-.bannerHeader{
+/* .bannerHeader{
     position: relative;
     max-height: fit-content;
     margin-bottom: 0px;
+    width: 100%;
+    height: 600px;
+    max-height: 600px;
 
     &_containerTitle{
         max-width: 40%;
         text-align: center;
         display : flex;
+        position: absolute;
+        left: 0;
+        top : 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         line-height: 1;
         padding-top: 80px;
-        max-height: 800px;
+        max-height: 600px;
 
         &_h1{
             color : $color-txt-orange;
             font-family: $font-teko, sans-serif;
             font-weight:  bold;
             font-size : $h1;
-            max-height: 800px;
+            max-height: 600px;
         }
         &_h5{
             color : rgb(218, 213, 213);
@@ -82,7 +88,7 @@
         left: 0;
         top : 0;
         width: 100%;
-        max-height: 100vh;
+        max-height: 600px;
 
         &_purpleTrapeze{
             object-fit: cover;
@@ -95,11 +101,10 @@
     //Photo banner background -----------------
     &_container-bgImg{
         z-index: -2;
-            position: absolute;
-            top : 0;
-            left : 0;
-            width: 100%;
-            max-height: 600px;
+        //position: absolute;
+        top : 0;
+        left : 0;
+        width: 100%;
 
         &_photo{
             width : 100%;
@@ -108,6 +113,62 @@
         }
     }
 
+    //Title of the current page ---------------------
+    
+    &_pageTitle-box{
+        position : absolute;
+        top : 0;
+        left : 0;
+        z-index: 1;
+        border: 3px solid yellow;
+        display : flex;
+        justify-content: flex-end;
+        align-items: center;
+        width : 100%;
+        padding : 0px 50px 0px 50px;
+        height: 600vh;
+        max-height: 600px;
+
+        &_titleContainer{
+            width : 300px;
+            height : 300px;
+            border-radius: 50%;
+            background-color: white;
+        }
+    }
+} */
+
+.bannerHeader {
+    position: relative;
+    isolation: isolate;
+    border: 3px solid red;
+    z-index:0;
+    &_containerTitle {
+        z-index: 3;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        img {
+            max-width: 4rem;
+        }
+    }
+    &_container-Trapeze {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &_container-bgImg {
+        z-index: 1;
+        //position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &_pageTitle-box {
+
+    }
 }
 
 @keyframes changeWidth {

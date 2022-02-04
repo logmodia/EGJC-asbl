@@ -22,7 +22,7 @@
     <div class = "bannerHeader_containerTitle">
         <h1 class = "bannerHeader_containerTitle_h1">EGLISE GLORIEUSE</h1>
         <h1 class = "bannerHeader_containerTitle_h1">DE JESUS-CHRIST</h1>
-        <h5 class = "bannerHeader_containerTitle_h5">Evangile,  Crainte de Dieu,  Foi,  Amour ,  Salut</h5>
+        <h5 class = "bannerHeader_containerTitle_h5">Evangile,  Crainte de Dieu, Foi, Amour , Salut</h5>
         <img class = "bannerHeader_containerTitle_bibleImg" src='{{Storage::url("assets/Bible-PNG-Isolated-Transparent.png")}}' alt="Image bible">
         <p class = "bannerHeader_containerTitle_verse">Juges 6:25-26</p>
     </div>
@@ -31,5 +31,10 @@
     </div>
     <div class="bannerHeader_container-bgImg">
         <img class="bannerHeader_container-bgImg_photo" src='{{Storage::url("assets/img_header1.jpg")}}'  class="purple-headerimg" alt="Imge de fond de l'en-tête de la page">
+    </div>
+    <div class="bannerHeader_pageTitle-box">
+        <div class="bannerHeader_pageTitle-box_titleContainer">
+            <h2 class = "bannerHeader_pageTitle-box_titleContainer_title h_2">Home</h2>
+        </div>
     </div>
 </div>
