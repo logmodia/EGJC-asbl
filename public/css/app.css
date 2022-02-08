@@ -26,8 +26,17 @@ body {
   font-size: 1.5rem;
 }
 
+.h_5 {
+  color: #fdaa05;
+  font-size: 1.2rem;
+}
+
 .verse_p2 {
   font-size: 1.1rem;
+}
+
+.text_p5 {
+  font-size: 1.3rem;
 }
 
 .nav-h {
@@ -611,6 +620,8 @@ body {
   padding: 0px 40px 0px 40px;
 }
 .activity_cardContainer_card {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   border: 1px solid #cacdce;
   border-radius: 3px;
@@ -626,8 +637,7 @@ body {
 }
 .activity_cardContainer_card_textBox {
   background-color: rgba(29, 29, 29, 0.9);
-  width: 100%;
-  height: wrap;
+  flex: 1;
 }
 .activity_cardContainer_card_imgBox {
   margin: 30px auto;
@@ -656,6 +666,164 @@ body {
   color: #bebdbd;
   padding: 20px 15px 20px 15px;
   text-align: justify;
+}
+
+.news {
+  margin: 30px auto;
+  background-color: #97868f;
+}
+.news_container {
+  margin: 0 auto;
+  width: 80%;
+  padding: 30px 0px 0px 0px;
+}
+.news_container_category {
+  background-image: url(/images/purple-title-bg.png?e874bd91a4bd31292265c33fafc5ea58);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50%;
+  padding: 0px 0px 0px 10px;
+  font-size: 1.8rem;
+  color: #da9305;
+}
+.news_container_textBox {
+  background-color: #f5f3f3;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 3px 3px 5px #bdbcbc;
+  margin-bottom: 5px;
+}
+.news_container_textBox_title {
+  color: black;
+  font-size: 1.8rem;
+  padding: 10px 0px 10px 0px;
+}
+
+.vision {
+  isolation: isolate;
+  position: relative;
+  margin: 50px 0px 400px 0px;
+}
+.vision_title {
+  position: absolute;
+  top: 50px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  font-size: 5rem;
+}
+.vision_textBox {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 90%;
+}
+.vision_textBox_text {
+  margin: 0px auto;
+  color: white;
+  font-size: 1.7rem;
+  text-align: center;
+  padding: 0px 10px 0px 10px;
+  width: 80%;
+}
+
+.vision::after {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  width: 90%;
+  max-width: 90%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(48, 5, 48, 0.9);
+  height: 70%;
+  max-height: 70%;
+  top: 100%;
+  left: 50%;
+}
+
+.functioning {
+  background-image: url(/images/img_bg_2.png?be9ba6fb431b81fa0efa22e2479d340c);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 100vmax rgba(0, 0, 0, 0.9);
+  margin-bottom: 50px;
+  padding: 50px 0px 50px 0px;
+}
+.functioning_title {
+  color: white;
+  text-align: center;
+  width: 100%;
+  font-size: 5rem;
+}
+.functioning_textBox {
+  margin: 0px auto;
+  color: white;
+  font-size: 1.7rem;
+  text-align: center;
+  padding: 0px 10px 0px 10px;
+  width: 80%;
+  padding: 50px 0px 50px 0px;
+}
+
+.committee {
+  margin: 50px auto;
+  background-image: url(/images/img_bg_2.png?be9ba6fb431b81fa0efa22e2479d340c);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 0 100vmax rgba(48, 5, 48, 0.9);
+  padding: 40px 0px 80px 0px;
+}
+.committee_title {
+  color: white;
+  text-align: center;
+  width: 100%;
+  font-size: 5rem;
+  padding: 10px 0px 70px 0px;
+}
+.committee_cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: auto 200px;
+  padding: 20px 20px 20px 20px;
+  background-color: rgba(122, 121, 122, 0.3);
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+}
+.committee_cardContainer_card {
+  width: 300px;
+  height: auto;
+  padding: 10px 0px 10px 0px;
+}
+.committee_cardContainer_card_imgBox {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.committee_cardContainer_card_imgBox_img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.committee_cardContainer_card_name {
+  font-family: "Arvo", sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  padding: 20px 0px 0px 0px;
+}
+.committee_cardContainer_card_role {
+  font-size: 1.1rem;
+  text-align: center;
+  color: white;
 }
 
 .footer {

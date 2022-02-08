@@ -1,0 +1,143 @@
+.vision{
+    isolation : isolate;
+    position: relative;
+    margin: 50px 0px 400px 0px;
+
+    &_title{
+        position: absolute;
+        top: 50px;
+        color : white;
+        text-align: center;
+        width: 100%;
+        font-size: $h1;
+    }
+
+    &_textBox{
+        position : absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 90%;
+
+        &_text{
+            margin : 0px auto;
+            color : white;
+            font-size: $p3;
+            text-align: center;
+            padding : 0px 10px 0px 10px;
+            width: 80%;
+        }
+    }
+
+}
+
+.vision::after{
+    position: absolute;
+    content: "";
+    z-index: 1;
+    width: 90%;
+    max-width: 90%;
+    transform: translate(-50%, -50%);
+    background-color : $color-rgba_darkPurple-1;
+    height: 70%;
+    max-height: 70%;
+    top: 100%;
+    left: 50%;
+}
+
+.functioning{
+    background-image: url("../../public/storage/assets/img_bg_2.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 100vmax rgba(0, 0, 0, .9);
+    margin-bottom: 50px;
+    padding : 50px 0px 50px 0px; 
+
+    &_title{
+        color : white;
+        text-align: center;
+        width: 100%;
+        font-size: $h1;
+    }
+
+    &_textBox{
+        margin : 0px auto;
+        color : white;
+        font-size: $p3;
+        text-align: center;
+        padding : 0px 10px 0px 10px;
+        width: 80%;
+        padding : 50px 0px 50px 0px;
+
+    }
+}
+
+.committee{
+    margin : 50px auto;
+    background-image: url("../../public/storage/assets/img_bg_2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 100vmax $color-rgba_darkPurple-1;
+    padding : 40px 0px 80px 0px;
+
+    &_title{
+        color : white;
+        text-align: center;
+        width: 100%;
+        font-size: $h1;
+        padding : 10px 0px 70px 0px;
+    }
+    
+    &_cardContainer{
+        display : flex;
+        flex-wrap: wrap;
+        justify-content : center;
+        gap: 10px;
+
+        margin : auto 200px;
+        padding : 20px 20px 20px 20px;
+        background-color : rgba(122, 121, 122, .3);
+        box-shadow : 5px 5px 5px rgba(255, 255, 255, .6);
+        border-radius : 10px;
+
+        &_card{
+            width: 300px;
+            height: auto;
+            padding: 10px 0px 10px 0px; 
+
+            &_imgBox{
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin: 0 auto;
+
+                &_img{
+                    object-fit: cover;
+                    display : block;
+                }
+
+            }
+
+
+            &_name{
+                font-family: $font-arvo, sans-serif;
+                font-size: $h5;
+                color : white;
+                text-align: center;
+                padding : 20px 0px 0px 0px;
+            }
+
+            &_role{
+                font-size: $p6;
+                text-align: center;
+                color : white;
+            }
+        }
+    }
+}

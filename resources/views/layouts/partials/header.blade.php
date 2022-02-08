@@ -7,8 +7,8 @@
         <li class="nav-h_item-container_item"><a href="/">Acueil</a></li>
         <li class="nav-h_item-container_item"><a href="/about">A propos de nous</a></li>
         <li class="nav-h_item-container_item"><a href="/activity">Activités</a></li>
-        <li class="nav-h_item-container_item"><a href="#">Actualités</a></li>
-        <li class="nav-h_item-container_item"><a href="#">Département</a></li>
+        <li class="nav-h_item-container_item"><a href="/news">Actualités</a></li>
+        <li class="nav-h_item-container_item"><a href="/departement">Département</a></li>
         <li class="nav-h_item-container_item"><a href="#">Evènement</a></li>
         <li class="nav-h_item-container_item"><a href="#">Gallérie</a></li>
         <li class="nav-h_item-container_item"><a href="#">Faire un don</a></li>

@@ -8,7 +8,7 @@
         <title>EGJC | Home</title>
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yanone Kaffeesatz|Exo 2|Teko|Sofia|Tangerine">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yanone Kaffeesatz|Exo 2|Teko|Arvo|Sofia|Tangerine">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
         <!-- Fontawesome icon -->

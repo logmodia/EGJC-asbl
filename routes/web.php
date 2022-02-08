@@ -16,11 +16,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layouts.home');
 });
+
 Route::get('/about', function () {
     return view('layouts.about');
 });
+
 Route::get('/activity', function () {
     return view('layouts.activity');
+});
+
+Route::get('/news', function () {
+    return view('layouts.news');
+});
+
+Route::get('/departement', function () {
+    return view('layouts.departement');
 });
 
 Route::get('/dashboard', function () {
