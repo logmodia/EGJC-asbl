@@ -1,0 +1,160 @@
+.presentation{
+    width: 100%;
+    margin : 0px auto;
+
+    &_div{
+        width: 100%;
+        margin : 0px auto;
+        padding : 80px 0px 100px 0px;
+        background-image: url("../../public/storage/assets/dark_landscpe.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; 
+        background-attachment: fixed;
+        box-shadow: inset 0 0 0 100vmax rgba(48, 5, 48, .8);
+
+    }
+    
+    &_textContainer{
+        margin : auto 200px;
+        padding : 20px 20px 20px 20px;
+        background-color : rgba(122, 121, 122, .3);
+        box-shadow : 5px 5px 5px rgba(255, 255, 255, .6);
+        border-radius : 10px;
+
+        &_about{
+            text-align: center;
+            padding : 0px 0px 60px 0px;
+        }
+        &_mission{
+            text-align: center;
+            padding : 0px 0px 60px 0px;
+        }
+        &_objectif{
+            text-align: center;
+            padding : 0px 0px 60px 0px;
+        }
+    }
+    
+    &_paragraph{
+        color: white;
+        font-size: $p5;
+        text-align: center;
+    }
+    
+}
+
+.detail-value{
+    width: 100%;
+    margin-bottom : 30px;
+
+    &_div{
+        width: 100%;
+        margin : 0px auto;
+        padding : 70px 0px 70px 0px;
+        background-image: url("../../public/storage/assets/dark_landscpe.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; 
+        background-attachment: fixed;
+        box-shadow: inset 0 0 0 100vmax rgba(189, 173, 189, 0.8);
+
+    }
+
+    &_containerBox{
+        margin : auto 200px;
+        display : flex;
+        flex-wrap: wrap;
+        justify-content : center;
+        gap: 30px;
+
+        &_valueCard{
+            background-color : rgba(122, 121, 122, .6);
+            box-shadow : 5px 5px 5px rgba(255, 255, 255, .6);
+            border-radius : 10px;
+            width : 300px;
+            //height : 400px;
+            padding : 10px;
+
+            &_valueTitle{
+                color : white;
+                font-size: $h4;
+                padding : 5px 0px 20px 0px;
+                text-align: center;
+            }
+            &_text{
+                color : white;
+                font-size: 1.2rem;
+                padding : 0px 5px 50px 5px;
+                text-align: justify;
+                //height : 250px;
+
+            }
+            &_verse{
+                color : white;
+                text-align: center;
+            }
+        }
+        
+    }
+
+}
+
+.aboutPastor{
+    position: relative;
+    padding-bottom: 2rem;
+    height : 800px;
+    margin-bottom : 50px;
+
+    &_textContainer{
+        position : absolute;
+        z-index: 1;
+        top:  0;
+        left: 0;
+        width: 100%;
+        padding: 1rem 15rem 1rem 15rem;
+
+        &_text{
+            color : white;
+            font-size : $p4;
+            text-align : justify;
+        }
+
+        &_p1{
+            padding : 30px 0px 0px 0px;
+        }
+
+        &_imgBox{
+            border-radius : 50%;
+            width : 300px;
+            height : 300px;
+            float : left;
+            overflow: hidden;
+            margin: 5px 30px;
+
+            &_image{
+                object-fit : cover;
+                width : 400px;
+                height : 300px;
+            }
+        }
+
+    }
+}
+
+.aboutPastor::after{
+    position : absolute;
+    bottom : 0;
+    left: 0;
+    content : "";
+    z-index: -1;
+    width: 100%;
+    height: 80%;
+    
+    background-image: url("../../public/storage/assets/dark_landscpe.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 100vmax rgba(48, 5, 48, 0.8);
+}

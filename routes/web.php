@@ -16,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layouts.home');
 });
+Route::get('/about', function () {
+    return view('layouts.about');
+});
+Route::get('/activity', function () {
+    return view('layouts.activity');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

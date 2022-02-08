@@ -4,13 +4,13 @@ body {
 
 .h_2 {
   color: #fdaa05;
-  font-size: calc(2.5rem + 0.7vw);
+  font-size: 3.5rem;
   text-align: center;
 }
 
 .title-h2 {
   color: #fdaa05;
-  font-size: calc(2.5rem + 0.7vw);
+  font-size: 3.5rem;
   font-weight: bold;
   text-align: center;
   padding: 40px 0px 40px 0px;
@@ -18,7 +18,16 @@ body {
 
 .h_3 {
   color: #fdaa05;
-  font-size: calc(1rem + 1vw);
+  font-size: 2.5rem;
+}
+
+.h_4 {
+  color: #fdaa05;
+  font-size: 1.5rem;
+}
+
+.verse_p2 {
+  font-size: 1.1rem;
 }
 
 .nav-h {
@@ -40,6 +49,7 @@ body {
 }
 .nav-h_item-container_item a {
   padding: 8px;
+  transition: 0.2s linear;
 }
 .nav-h_item-container_item a:hover {
   background-color: #512651;
@@ -48,139 +58,133 @@ body {
   border-radius: 5px;
 }
 
-/* .bannerHeader{
-    position: relative;
-    max-height: fit-content;
-    margin-bottom: 0px;
-    width: 100%;
-    height: 600px;
-    max-height: 600px;
-
-    &_containerTitle{
-        max-width: 40%;
-        text-align: center;
-        display : flex;
-        position: absolute;
-        left: 0;
-        top : 0;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        line-height: 1;
-        padding-top: 80px;
-        max-height: 600px;
-
-        &_h1{
-            color : $color-txt-orange;
-            font-family: $font-teko, sans-serif;
-            font-weight:  bold;
-            font-size : $h1;
-            max-height: 600px;
-        }
-        &_h5{
-            color : rgb(218, 213, 213);
-            font-weight:  bold;
-            font-size : $h5;
-            padding-bottom: 5px;
-            font-family: $font-teko, sans-serif;
-            word-spacing: 3px;
-        }
-        &_bibleImg{
-            max-width: 50px;
-            max-height: 50px;
-        }
-        &_verse{
-            color : rgb(218, 213, 213);
-            font-size:  calc(0.5rem + 0.5vw);
-            font-weight:  bold;
-            padding : 10px;
-        }
-    }
-
-    //Purple banner trapeze --------------------------
-    &_container-Trapeze{
-        z-index: -1;
-        position: absolute;
-        left: 0;
-        top : 0;
-        width: 100%;
-        max-height: 600px;
-
-        &_purpleTrapeze{
-            object-fit: cover;
-            width: 60%;
-            max-height: 600px;
-            animation: 4s reverse changeWidth;
-        }
-    }
-
-    //Photo banner background -----------------
-    &_container-bgImg{
-        z-index: -2;
-        //position: absolute;
-        top : 0;
-        left : 0;
-        width: 100%;
-
-        &_photo{
-            width : 100%;
-            max-height: 600px;
-            object-fit: cover;
-        }
-    }
-
-    //Title of the current page ---------------------
-
-    &_pageTitle-box{
-        position : absolute;
-        top : 0;
-        left : 0;
-        z-index: 1;
-        border: 3px solid yellow;
-        display : flex;
-        justify-content: flex-end;
-        align-items: center;
-        width : 100%;
-        padding : 0px 50px 0px 50px;
-        height: 600vh;
-        max-height: 600px;
-
-        &_titleContainer{
-            width : 300px;
-            height : 300px;
-            border-radius: 50%;
-            background-color: white;
-        }
-    }
-} */
 .bannerHeader {
   position: relative;
-  isolation: isolate;
-  border: 3px solid red;
-  z-index: 0;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 600px;
+  max-height: 600px;
 }
 .bannerHeader_containerTitle {
-  z-index: 3;
+  max-width: 40%;
+  text-align: center;
+  display: flex;
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  left: 0;
+  top: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  padding-top: 80px;
+  max-height: 600px;
 }
-.bannerHeader_containerTitle img {
-  max-width: 4rem;
+.bannerHeader_containerTitle_h1 {
+  color: #da9305;
+  font-family: "Teko", sans-serif;
+  font-weight: bold;
+  font-size: 5rem;
+  max-height: 600px;
+}
+.bannerHeader_containerTitle_h5 {
+  color: #dad5d5;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+  font-family: "Teko", sans-serif;
+  word-spacing: 3px;
+}
+.bannerHeader_containerTitle_bibleImg {
+  max-width: 50px;
+  max-height: 50px;
+}
+.bannerHeader_containerTitle_verse {
+  color: #dad5d5;
+  font-size: calc(0.5rem + 0.5vw);
+  font-weight: bold;
+  padding: 10px;
 }
 .bannerHeader_container-Trapeze {
-  z-index: 2;
+  z-index: -1;
   position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
+  width: 100%;
+  max-height: 600px;
+}
+.bannerHeader_container-Trapeze_purpleTrapeze {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 60%;
+  max-height: 600px;
+  animation: 4s reverse changeWidth;
 }
 .bannerHeader_container-bgImg {
-  z-index: 1;
+  z-index: -2;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
 }
+.bannerHeader_container-bgImg_photo {
+  width: 100%;
+  max-height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.bannerHeader_pageTitle-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border: 3px solid yellow;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 0px 50px 0px 50px;
+  height: 600vh;
+  max-height: 600px;
+}
+.bannerHeader_pageTitle-box_titleContainer {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* .bannerHeader {
+    position: relative;
+    isolation: isolate;
+    border: 3px solid red;
+    z-index:0;
+    &_containerTitle {
+        z-index: 3;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        img {
+            max-width: 4rem;
+        }
+    }
+    &_container-Trapeze {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &_container-bgImg {
+        z-index: 1;
+        //position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &_pageTitle-box {
+
+    }
+} */
 @-webkit-keyframes changeWidth {
   from {
     width: 60%;
@@ -217,7 +221,7 @@ body {
 }
 .about_textContainer {
   margin: 0 auto;
-  font-size: calc(1rem + 0.7vw);
+  font-size: 1.7rem;
   text-align: center;
   color: white;
   padding: 30px;
@@ -259,13 +263,13 @@ body {
 .values_containerBox_valueCard_valueTitle {
   background-color: #512651;
   color: white;
-  font-size: calc(0.8rem + 0.6vw);
+  font-size: 1.2rem;
   padding: 5px;
   border-bottom: 1px solid white;
   border-radius: 20px 20px 0px 0px;
 }
 .values_containerBox_valueCard_verse {
-  font-size: calc(0.8rem + 0.5vw);
+  font-size: 1.3rem;
 }
 .values_containerBox_valueCard .verse_p2 {
   padding: 0px 0px 30px 0px;
@@ -296,7 +300,7 @@ body {
 }
 .yearVision_textBox_h3-year {
   color: #da9305;
-  font-size: calc(2.5rem + 0.7vw);
+  font-size: 3.5rem;
   margin-left: 50px;
   line-height: 1;
 }
@@ -321,7 +325,7 @@ body {
 }
 .news_containerBox_newsCard_newsType {
   color: black;
-  font-size: calc(0.8rem + 0.8vw);
+  font-size: 1.5rem;
 }
 .news_containerBox_newsCard_item {
   background-color: #e5e6e7;
@@ -330,7 +334,7 @@ body {
   border-radius: 3px;
 }
 .news_containerBox_newsCard_item_newsTitle {
-  font-size: calc(0.8rem + 0.6vw);
+  font-size: 1.2rem;
   color: #da9305;
   padding: 5px 0px 5px 0px;
 }
@@ -388,15 +392,15 @@ body {
 }
 .week-schedule_cardContainer_card_dayName {
   color: #797879;
-  font-size: calc(0.8rem + 0.6vw);
+  font-size: 1.2rem;
   padding-top: 20px;
 }
 .week-schedule_cardContainer_card_hour-activity_hour {
-  font-size: calc(0.8rem + 0.5vw);
+  font-size: 1.3rem;
   color: #da9305;
 }
 .week-schedule_cardContainer_card_hour-activity_activity {
-  font-size: calc(0.8rem + 0.5vw);
+  font-size: 1.3rem;
   color: #797879;
   padding-top: 10px;
 }
@@ -428,10 +432,10 @@ body {
   padding: 130px 0px 100px 0px;
 }
 .nextEvent_eventContainer_event_title {
-  font-size: calc(1rem + 1vw);
+  font-size: 2.5rem;
 }
 .nextEvent_eventContainer_event_date {
-  font-size: calc(1rem + 0.7vw);
+  font-size: 1.7rem;
 }
 
 .sec-map {
@@ -445,7 +449,7 @@ body {
 
 .savoir-plus {
   color: white;
-  font-size: calc(1rem + 0.7vw);
+  font-size: 1.7rem;
   background-color: #d89205;
   padding: 15px;
   margin-top: 50px;
@@ -455,6 +459,203 @@ body {
 .mask-img {
   -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
           mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+}
+
+.presentation {
+  width: 100%;
+  margin: 0px auto;
+}
+.presentation_div {
+  width: 100%;
+  margin: 0px auto;
+  padding: 80px 0px 100px 0px;
+  background-image: url(/images/dark_landscpe.jpg?3595cc797a53a6cae2408913e71b53dc);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 0 100vmax rgba(48, 5, 48, 0.8);
+}
+.presentation_textContainer {
+  margin: auto 200px;
+  padding: 20px 20px 20px 20px;
+  background-color: rgba(122, 121, 122, 0.3);
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+}
+.presentation_textContainer_about {
+  text-align: center;
+  padding: 0px 0px 60px 0px;
+}
+.presentation_textContainer_mission {
+  text-align: center;
+  padding: 0px 0px 60px 0px;
+}
+.presentation_textContainer_objectif {
+  text-align: center;
+  padding: 0px 0px 60px 0px;
+}
+.presentation_paragraph {
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.detail-value {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.detail-value_div {
+  width: 100%;
+  margin: 0px auto;
+  padding: 70px 0px 70px 0px;
+  background-image: url(/images/dark_landscpe.jpg?3595cc797a53a6cae2408913e71b53dc);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 0 100vmax rgba(189, 173, 189, 0.8);
+}
+.detail-value_containerBox {
+  margin: auto 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.detail-value_containerBox_valueCard {
+  background-color: rgba(122, 121, 122, 0.6);
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  width: 300px;
+  padding: 10px;
+}
+.detail-value_containerBox_valueCard_valueTitle {
+  color: white;
+  font-size: 1.5rem;
+  padding: 5px 0px 20px 0px;
+  text-align: center;
+}
+.detail-value_containerBox_valueCard_text {
+  color: white;
+  font-size: 1.2rem;
+  padding: 0px 5px 50px 5px;
+  text-align: justify;
+}
+.detail-value_containerBox_valueCard_verse {
+  color: white;
+  text-align: center;
+}
+
+.aboutPastor {
+  position: relative;
+  padding-bottom: 2rem;
+  height: 800px;
+  margin-bottom: 50px;
+}
+.aboutPastor_textContainer {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 15rem 1rem 15rem;
+}
+.aboutPastor_textContainer_text {
+  color: white;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+.aboutPastor_textContainer_p1 {
+  padding: 30px 0px 0px 0px;
+}
+.aboutPastor_textContainer_imgBox {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  float: left;
+  overflow: hidden;
+  margin: 5px 30px;
+}
+.aboutPastor_textContainer_imgBox_image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 400px;
+  height: 300px;
+}
+
+.aboutPastor::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 80%;
+  background-image: url(/images/dark_landscpe.jpg?3595cc797a53a6cae2408913e71b53dc);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 0 100vmax rgba(48, 5, 48, 0.8);
+}
+
+.activity {
+  margin: 50px;
+}
+.activity_cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 0px 40px 0px 40px;
+}
+.activity_cardContainer_card {
+  text-align: center;
+  border: 1px solid #cacdce;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px gray;
+  max-width: 400px;
+  background-image: url(/images/img_bgactivity.jpg?907c8863bd73f08a143db0c71ffd7ef1);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.activity_cardContainer_card_title-h2 {
+  padding: 15px 15px 0px 15px;
+}
+.activity_cardContainer_card_textBox {
+  background-color: rgba(29, 29, 29, 0.9);
+  width: 100%;
+  height: wrap;
+}
+.activity_cardContainer_card_imgBox {
+  margin: 30px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+}
+.activity_cardContainer_card_imgBox_img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.activity_cardContainer_card_dayName {
+  color: #797879;
+  font-size: 1.2rem;
+  padding-top: 20px;
+}
+.activity_cardContainer_card_hour-activity_hour {
+  font-size: 1.3rem;
+  color: #da9305;
+}
+.activity_cardContainer_card_hour-activity_activity {
+  font-size: 1.3rem;
+  color: #bebdbd;
+  padding: 20px 15px 20px 15px;
+  text-align: justify;
 }
 
 .footer {
@@ -467,7 +668,7 @@ body {
   gap: 200px;
 }
 .footer p {
-  font-size: calc(0.8rem + 0.5vw);
+  font-size: 1.3rem;
 }
 .footer_mainBlocks h3 {
   padding: 30px;

@@ -1,0 +1,70 @@
+.activity{
+    margin : 50px;
+
+    &_cardContainer{
+      display : flex;
+      flex-wrap : wrap;
+      justify-content : center;
+      gap: 30px;
+      padding: 0px 40px 0px 40px;
+
+      &_card{
+        text-align: center;
+        border : 1px solid $color-bgGray;
+        border-radius : 3px;
+        box-shadow: 3px 3px 5px gray;
+        max-width: 400px;
+
+        background-image: url("../../public/storage/assets/img_bgactivity.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        &_title-h2{
+          padding: 15px 15px 0px 15px;
+        }
+
+        &_textBox{
+            background-color: rgba(29, 29, 29, .9);
+            width: 100%;
+            height : wrap;
+        }
+
+        &_imgBox{
+          margin : 30px auto;
+          border-radius: 50%;
+          overflow : hidden;
+          width : 300px;
+          height : 300px;
+          
+          &_img{
+            object-fit : cover;
+            width : 100%;
+            height : 100%;
+          }
+
+        }
+
+        &_dayName{
+          color : $color-txt-gray;
+          font-size : $h5;
+          padding-top: 20px;
+        }
+
+        &_hour-activity{
+          &_hour{
+            font-size : $p5;
+            color : $color-txt-orange;
+          }
+          &_activity{
+            font-size : $p5;
+            color : rgb(190, 189, 189);
+            padding: 20px 15px 20px 15px;
+            text-align : justify;
+          }
+        }
+
+      }
+    }
+
+  }

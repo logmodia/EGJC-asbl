@@ -4,16 +4,16 @@
     </div>
 
     <div class="nav-h_item-container">
-                <li class="nav-h_item-container_item"><a href="#">Acueil</a></li>
-                <li class="nav-h_item-container_item"><a href="#">A propos de nous</a></li>
-                <li class="nav-h_item-container_item"><a href="#">Activités</a></li>
-                <li class="nav-h_item-container_item"><a href="#">Actualités</a></li>
-                <li class="nav-h_item-container_item"><a href="#">Département</a></li>
-                <li class="nav-h_item-container_item"><a href="#">Evènement</a></li>
-                <li class="nav-h_item-container_item"><a href="#">Gallérie</a></li>
-                <li class="nav-h_item-container_item"><a href="#">Faire un don</a></li>
-                <li class="nav-h_item-container_item"><a href="#">Nous contacter</a></li>
-                <li class="nav-h_item-container_item"><a href="{{ url('/dashboard') }}">Gestion</a></li>
+        <li class="nav-h_item-container_item"><a href="/">Acueil</a></li>
+        <li class="nav-h_item-container_item"><a href="/about">A propos de nous</a></li>
+        <li class="nav-h_item-container_item"><a href="/activity">Activités</a></li>
+        <li class="nav-h_item-container_item"><a href="#">Actualités</a></li>
+        <li class="nav-h_item-container_item"><a href="#">Département</a></li>
+        <li class="nav-h_item-container_item"><a href="#">Evènement</a></li>
+        <li class="nav-h_item-container_item"><a href="#">Gallérie</a></li>
+        <li class="nav-h_item-container_item"><a href="#">Faire un don</a></li>
+        <li class="nav-h_item-container_item"><a href="#">Nous contacter</a></li>
+        <li class="nav-h_item-container_item"><a href="{{ url('/dashboard') }}">Gestion</a></li>
     </div>
 
 </div>
@@ -32,9 +32,9 @@
     <div class="bannerHeader_container-bgImg">
         <img class="bannerHeader_container-bgImg_photo" src='{{Storage::url("assets/img_header1.jpg")}}'  class="purple-headerimg" alt="Imge de fond de l'en-tête de la page">
     </div>
-    <div class="bannerHeader_pageTitle-box">
+    <!-- <div class="bannerHeader_pageTitle-box">
         <div class="bannerHeader_pageTitle-box_titleContainer">
             <h2 class = "bannerHeader_pageTitle-box_titleContainer_title h_2">Home</h2>
         </div>
-    </div>
+    </div> -->
 </div>
