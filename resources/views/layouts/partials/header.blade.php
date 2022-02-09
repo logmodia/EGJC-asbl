@@ -9,8 +9,8 @@
         <li class="nav-h_item-container_item"><a href="/activity">Activités</a></li>
         <li class="nav-h_item-container_item"><a href="/news">Actualités</a></li>
         <li class="nav-h_item-container_item"><a href="/departement">Département</a></li>
-        <li class="nav-h_item-container_item"><a href="#">Evènement</a></li>
-        <li class="nav-h_item-container_item"><a href="#">Gallérie</a></li>
+        <li class="nav-h_item-container_item"><a href="/event">Evènement</a></li>
+        <li class="nav-h_item-container_item"><a href="/gallery">Gallérie</a></li>
         <li class="nav-h_item-container_item"><a href="#">Faire un don</a></li>
         <li class="nav-h_item-container_item"><a href="#">Nous contacter</a></li>
         <li class="nav-h_item-container_item"><a href="{{ url('/dashboard') }}">Gestion</a></li>

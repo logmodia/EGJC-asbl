@@ -31,12 +31,21 @@ body {
   font-size: 1.2rem;
 }
 
+.h_6 {
+  color: #fdaa05;
+  font-size: 1rem;
+}
+
 .verse_p2 {
   font-size: 1.1rem;
 }
 
 .text_p5 {
   font-size: 1.3rem;
+}
+
+.text_p6 {
+  font-size: 1.1rem;
 }
 
 .nav-h {
@@ -824,6 +833,90 @@ body {
   font-size: 1.1rem;
   text-align: center;
   color: white;
+}
+
+.event {
+  position: relative;
+  isolation: isolate;
+  margin: 50px 0px;
+}
+.event_imgBox {
+  width: 100%;
+  height: 30%;
+  margin-bottom: 2px;
+}
+.event_imgBox_img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+  width: 100%;
+  max-height: 400px;
+  filter: brightness(30%);
+}
+.event_title {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  width: 50%;
+  z-index: 1;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  font-family: "Teko", sans-serif;
+  text-align: center;
+  background-color: rgba(117, 115, 117, 0.5);
+}
+.event_calendarBox {
+  background-color: #080601;
+  padding: 30px 0px 30px 0px;
+  background-image: url(/images/img_bg_2.png?be9ba6fb431b81fa0efa22e2479d340c);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 0 100vmax rgba(48, 5, 48, 0.9);
+}
+.event_calendarBox_mothBox {
+  margin: 0 auto;
+  padding: 20px;
+  width: 80%;
+}
+.event_calendarBox_mothBox_mothName {
+  font-family: "Arvo";
+  border-bottom: 1px solid #fdaa05;
+}
+.event_calendarBox_mothBox_eventContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+}
+.event_calendarBox_mothBox_eventContainer_eventCard {
+  border-left: 3px solid #fdaa05;
+  width: 20%;
+  padding: 0px 5px 0px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.event_calendarBox_mothBox_eventContainer_eventCard_title {
+  padding: 0px 0px 5px 0px;
+}
+.event_calendarBox_mothBox_eventContainer_eventCard_date {
+  color: white;
+}
+.event_calendarBox_mothBox_eventContainer_eventCard_hour {
+  color: white;
+}
+.event_calendarBox_mothBox_eventContainer_eventCard_venue {
+  color: white;
+  padding: 5px 0px 0px 0px;
+  justify-self: start;
 }
 
 .footer {

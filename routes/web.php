@@ -33,6 +33,14 @@ Route::get('/departement', function () {
     return view('layouts.departement');
 });
 
+Route::get('/event', function () {
+    return view('layouts.event');
+});
+
+Route::get('/gallery', function () {
+    return view('layouts.gallery');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
