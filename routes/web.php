@@ -41,6 +41,10 @@ Route::get('/gallery', function () {
     return view('layouts.gallery');
 });
 
+Route::get('/preaching', function () {
+    return view('layouts.preaching');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
