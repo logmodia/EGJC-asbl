@@ -1,0 +1,127 @@
+.searchBar{
+    margin : 10px auto;
+    width: 70%;
+    padding: 20px;
+
+    &_lab-searchInput{
+        display: block;
+    }
+    
+    &_searchInput{
+        display: block;
+        width: 100%;
+    }
+
+    &_lab-preacher{
+        display: block;
+        padding : 10px 0 3px 0;
+    }
+
+    &_selectBox{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-basis: 0;
+
+        gap : 10px;
+    }
+
+    &_selectPreacher{
+        display : block;
+        flex : 1;
+    }
+
+    &_selectService{
+        display : block;
+        flex : 1;
+    }
+
+    &_inputDate{
+        display : block;
+        flex : 1;
+    }
+}
+
+.preachList{
+    background-color: rgb(56, 39, 61);
+    margin: 30px auto;
+    padding : 30px 0px 30px 0px;
+}
+
+.preachBox{
+    margin : 30px auto;
+    width : 80%;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgb(173, 173, 173);
+    border : 2px solid $color-light_bgGray;
+
+    &_preacher-topic{
+        border-bottom : 2px solid $color-light_bgGray;
+        padding : 10px;
+        height : max-content;
+        overflow: hidden;
+        width : 100%;
+        
+        &_preacher{
+            float: left;
+
+            &_preacherImg-container{
+                width: fit-content;
+                height : fit-content;
+                padding: 0px 10px 10px 0px;
+                
+                &_img{
+                    object-fit: cover;
+                    width : 100px;
+                    height: 100px;
+                    object-position: top;
+                }
+            }
+
+            &_name{
+                color: $color-txt-orange;
+                text-align: center;
+                padding-right: 10px;
+            }
+        }
+
+        &_topicBox{
+            width: 100%;
+            padding: 0px 0px 0px 0px;
+
+            &_topic{
+                width: 100%;
+                padding: 0px 0px 10px 0px;
+            }
+            &_summary{
+                width: 100%;
+                padding: 0px 0px 20px 0px;
+            }
+            &_verse{
+                width: 100%;
+                color: $color-txt-gray;
+                text-align: right;
+            }
+        }
+    }
+
+    &_service-date-link{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-items: center;
+        gap: 10px;
+        color: $color-txt-gray;
+        padding : 5px;
+
+        &_link{
+            background-color: $color-orange;
+            color: white;
+            padding: 2px 4px 2px 4px;
+            border-radius: 3px;
+
+        }
+
+    }
+
+}
