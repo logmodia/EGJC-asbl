@@ -35,82 +35,64 @@
 
 .bannerHeader{
     position: relative;
-    //max-height: fit-content;
-    margin-bottom: 0px;
-    width: 100%;
-    height: 600px;
-    max-height: 600px;
 
-    &_containerTitle{
-        max-width: 40%;
-        text-align: center;
-        display : flex;
+    &_container-homeTitle{
         position: absolute;
-        left: 0;
-        top : 0;
+        left: 60px;
+        top : 100px;
+        overflow: hidden;
+        z-index: 2;
+        width: fit-content;
+
+        display : flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        line-height: 1;
-        padding-top: 80px;
-        max-height: 600px;
+        align-items : center;
+
+        //padding: 60px 0px 0px 30px;
+        text-align: justify;
 
         &_h1{
-            color : $color-txt-orange;
-            font-family: $font-teko, sans-serif;
-            font-weight:  bold;
-            font-size : $h1;
-            max-height: 600px;
+            font-family: $font-teko;
+            font-size: $h1;
+            color : $color-orange;
+            font-weight : bolder;
+            line-height : 1;
+            letter-spacing : 1px;
         }
         &_h5{
-            color : rgb(218, 213, 213);
-            font-weight:  bold;
-            font-size : $h5;
-            padding-bottom: 5px;
-            font-family: $font-teko, sans-serif;
-            word-spacing: 3px;
+            font-size: $h4;
+            color : $color-orange;
+            letter-spacing : 1px;
         }
+
         &_bibleImg{
-            max-width: 50px;
-            max-height: 50px;
+            width: 3rem;
+            height: 3rem;
         }
+
         &_verse{
-            color : rgb(218, 213, 213);
-            font-size:  calc(0.5rem + 0.5vw);
-            font-weight:  bold;
-            padding : 10px;
+            font-size : $p5;
+            color : white;
+            letter-spacing : 2px;
         }
+
     }
 
-    //Purple banner trapeze --------------------------
-    &_container-Trapeze{
-        z-index: -1;
-        position: absolute;
-        left: 0;
-        top : 0;
-        width: 100%;
-        max-height: 600px;
+    &_bgImg-container{
+        &_photo{
+            object-fit: cover;
+            display: block;
+        }
 
         &_purpleTrapeze{
-            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 60%;
-            max-height: 600px;
-            animation: 4s reverse changeWidth;
-        }
-    }
-
-    //Photo banner background -----------------
-    &_container-bgImg{
-        z-index: -2;
-        position: absolute;
-        top : 0;
-        left : 0;
-        width: 100%;
-
-        &_photo{
-            width : 100%;
-            max-height: 600px;
-            object-fit: cover;
+            height: 100%;
+            z-index: 1;
+            animation: 3s reverse width-grow;
         }
     }
 
@@ -118,62 +100,50 @@
     
     &_pageTitle-box{
         position : absolute;
-        top : 0;
-        left : 0;
-        z-index: 1;
-        border: 3px solid yellow;
-        display : flex;
-        justify-content: flex-end;
-        align-items: center;
-        width : 100%;
-        padding : 0px 50px 0px 50px;
-        height: 600vh;
-        max-height: 600px;
+        top : 25%;
+        right : 20%;
+        z-index: 3;
 
         &_titleContainer{
             width : 300px;
             height : 300px;
             border-radius: 50%;
-            background-color: white;
+            background-color: rgba(255,255,255,.9);
+            
+            display : flex;
+            justify-content: center;
+            align-items: center;
+            
+            &_title{
+                font-family: $font-exo2;
+                //font-size: $h1;
+                color : $color-darkOrange;
+                font-weight : bolder;
+
+            }
+
         }
     }
 } 
 
-/* .bannerHeader {
-    position: relative;
-    isolation: isolate;
-    border: 3px solid red;
-    z-index:0;
-    &_containerTitle {
-        z-index: 3;
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        img {
-            max-width: 4rem;
-        }
-    }
-    &_container-Trapeze {
-        z-index: 2;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    &_container-bgImg {
-        z-index: 1;
-        //position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-    &_pageTitle-box {
 
+@keyframes width-grow {
+    from {
+      width: 60%;
     }
-} */
+    to {
+      width: 100%;
+    }
+  }
 
-@keyframes changeWidth {
-    from {width: 60%;}
-    to {width: 100%; height: 700px;}
-    
+
+  //-------------- Media queries ----------------------------
+
+  @media screen and (max-width: 360px) {
+    .bannerHeader_container-homeTitle_h1{
+        font-size: $h6;
+    }
+    .bannerHeader_container-homeTitle_h1{
+        font-size: $h6;
+    }
   }

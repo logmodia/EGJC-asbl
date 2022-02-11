@@ -11,10 +11,11 @@ $color-rgba_darkOrange-1 : rgba(250, 169, 6, .3);
 $color-rgba_darkPurple-1 : rgba(48, 5, 48, .9);
 
 //Fonts -----------------------------------------
-$font-yonane : 'Yanone Kaffeesatz';
-$font-exo2 : 'Exo 2';
-$font-teko : 'Teko';
-$font-arvo : 'Arvo';
+$font-yonane : 'Yanone Kaffeesatz', 'sans-serif';
+$font-exo2 : 'Exo 2', 'sans-serif';
+$font-teko : 'Teko', 'sans-serif';
+$font-arvo : 'Arvo', 'sans-serif';
+$font-tangerine : 'Tangerine', 'sans-serif';
 
 //Font sizes ----------------------------------
 $h1 : 5rem;

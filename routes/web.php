@@ -48,6 +48,16 @@ Route::get('/preaching', function () {
 Route::get('/contact', function () {
     return view('layouts.contact');
 });
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
+Route::group(['middleware' => ['auth']], function() {
+    /**
+    * Logout Route
+    */
+    Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
+ });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
