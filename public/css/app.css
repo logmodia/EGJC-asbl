@@ -48,6 +48,10 @@ body {
   font-size: 1.1rem;
 }
 
+.option_0 {
+  color: #b82020;
+}
+
 .nav-h {
   display: flex;
   justify-content: center;
@@ -339,6 +343,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: stretch;
   gap: 35px;
 }
 .news_containerBox_newsCard_newsType {
@@ -350,6 +355,9 @@ body {
   padding: 10px;
   max-height: 210px;
   border-radius: 3px;
+}
+.news_containerBox_newsCard_item .weekTopic {
+  height: 100px;
 }
 .news_containerBox_newsCard_item_newsTitle {
   font-size: 1.2rem;
@@ -1091,6 +1099,48 @@ body {
   color: white;
   padding: 2px 4px 2px 4px;
   border-radius: 3px;
+}
+
+.formContainer {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #fcf9f9;
+  padding: 20px;
+}
+.formContainer_form {
+  margin: 30px auto;
+  width: 50%;
+  padding: 30px;
+}
+.formContainer_form input[type=text], .formContainer_form input[type=email], .formContainer_form select, .formContainer_form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.formContainer_form_btnContainer {
+  text-align: center;
+  margin-top: 40px;
+}
+.formContainer_form_btnContainer input[type=submit] {
+  background-color: #d89205;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  padding: 5px;
+  font-size: 1.3rem;
+}
+.formContainer_form_label-dataProtection {
+  padding: 5px;
+}
+.formContainer_form input[type=checkbox] {
+  margin-left: 50px;
 }
 
 .footer {

@@ -13,7 +13,7 @@
         <li class="nav-h_item-container_item"><a href="/gallery">Gallérie</a></li>
         <li class="nav-h_item-container_item"><a href="/preaching">Prédications</a></li>
         <li class="nav-h_item-container_item"><a href="#">Faire un don</a></li>
-        <li class="nav-h_item-container_item"><a href="#">Nous contacter</a></li>
+        <li class="nav-h_item-container_item"><a href="/contact">Nous contacter</a></li>
         <li class="nav-h_item-container_item"><a href="{{ url('/dashboard') }}">Gestion</a></li>
     </div>
 

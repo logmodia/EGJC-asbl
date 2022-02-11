@@ -103,7 +103,7 @@
               <div class="news_containerBox_newsCard_item">
                 <h5 class="news_containerBox_newsCard_item_newsTitle">Fidèlité dans le service</h5>
 
-                <div class="news_containerBox_newsCard_item_textBox">
+                <div class="news_containerBox_newsCard_item_textBox weekTopic">
                   <p class = "news_containerBox_newsCard_item_textBox_verse">Versets à méditer</p>
                   <p class = "news_containerBox_newsCard_item_textBox_verse verse_p2">1 samuel 2 : 35, 1 samuel 12 : 24</p>
                 </div>

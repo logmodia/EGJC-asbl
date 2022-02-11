@@ -130,8 +130,9 @@
       display : flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      align-items: stretch;
       gap: 35px;
-
+      
       &_newsCard{
         
         &_newsType{
@@ -144,6 +145,11 @@
           padding : 10px;
           max-height : 210px;
           border-radius : 3px;
+
+          .weekTopic{
+            height: 100px;
+    
+          }
 
           &_newsTitle{
             font-size: $h5;

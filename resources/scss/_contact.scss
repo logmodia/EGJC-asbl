@@ -1,0 +1,50 @@
+.formContainer{
+    width: 100%;
+    border-radius: 5px;
+    background-color: #fcf9f9;
+    padding: 20px;
+    
+    &_form{
+        margin : 30px auto;
+        width: 50%;
+        padding: 30px;
+
+        input[type=text],input[type=email], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        &_btnContainer{
+            text-align: center;
+            margin-top: 40px;
+
+            input[type=submit] {
+                background-color: $color-darkOrange-1;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                width: 100px;
+                padding: 5px;
+                font-size: $p5;
+    
+            }
+
+        }
+        
+        &_label-dataProtection{
+            padding: 5px;
+        }
+        
+        input[type=checkbox]{
+            margin-left: 50px;
+        }
+
+    }
+}
