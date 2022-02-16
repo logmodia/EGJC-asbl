@@ -52,6 +52,70 @@ body {
   color: #b82020;
 }
 
+.formContainer {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #fcf9f9;
+  padding: 20px;
+}
+
+.form {
+  margin: 30px auto;
+  width: 50%;
+  padding: 30px;
+}
+
+input[type=text], input[type=email], input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #d89205;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  padding: 5px;
+  font-size: 1.3rem;
+}
+
+.form_btn {
+  background-color: #d89205 !important;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  padding: 5px;
+  font-size: 1.3rem;
+}
+
+.btnContainer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+input[type=checkbox] {
+  margin-left: 50px;
+}
+
+.error-txt {
+  color: red;
+  font-size: 1.1rem;
+}
+
+.input-UC {
+  text-transform: uppercase;
+}
+
 .nav-h {
   display: flex;
   justify-content: center;
@@ -284,7 +348,7 @@ body {
 }
 .yearVision_textBox_h3-title {
   color: #da9305;
-  font-size: calc(5rem + 0.7vw);
+  font-size: calc(4rem + 0.7vw);
   margin-left: 100px;
 }
 
@@ -1068,7 +1132,7 @@ body {
   width: 50%;
   padding: 30px;
 }
-.formContainer_form input[type=text], .formContainer_form input[type=email], .formContainer_form select, .formContainer_form textarea {
+.formContainer_form input[type=text], .formContainer_form input[type=email], .formContainer_form input[type=number], .formContainer_form select, .formContainer_form textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -2067,13 +2131,13 @@ select {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 .px-1 {
   padding-left: 0.25rem;

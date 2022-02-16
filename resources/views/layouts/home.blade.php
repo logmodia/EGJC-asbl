@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('content')
-
+@section('content0')
+    @include("layouts.partials.header")
     <!-- ------------------------------- A propos de nous / qui sommes-nous ? --------------------------------- -->
 
     <section class="about">
@@ -84,9 +84,9 @@
         <img src='{{ Storage::url("assets/img_pasta_vision.png") }}' class="yearVision_img" alt="Image vision de l'année">
       <div class="yearVision_textBox">
         <h2 class = "yearVision_textBox_title title-h2">Vision de l'année</h2>
-        <h3 class = "yearVision_textBox_h3-year">2022</h3>
+        <h3 class = "yearVision_textBox_h3-year">{{ $year }}</h3>
         <h3 class = "yearVision_textBox_h3-year">Année de</h3>
-        <h3 class = "yearVision_textBox_h3-title">FIDELITE</h3>
+        <h3 class = "yearVision_textBox_h3-title">{{ Str::upper($Yearvision) }}</h3>
       </div>
 
     </section>
