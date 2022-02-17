@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content0')
+    @include("layouts.partials.header")
+    
     <form action="" method="get" class="searchBar">
 
         <label for="searchInput" class="searchBar_lab-searchInput text_p6">Rechercher</label>

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content0')
+    @include("layouts.partials.header")
     <section class="gallery">
 
         <h2 class = "title-h2">Nos cultes</h2>

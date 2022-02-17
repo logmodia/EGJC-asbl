@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\viewcontroller;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class galleryController extends Controller
 {
@@ -13,7 +14,8 @@ class galleryController extends Controller
      */
     public function index()
     {
-        //
+        $headTitle = "Gallérie";
+        return view('layouts.gallery',compact('headTitle','headTitle'));
     }
 
     /**

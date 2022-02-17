@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\viewcontroller;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class aboutController extends Controller
+class departementController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class aboutController extends Controller
      */
     public function index()
     {
-        //
+        $headTitle = "Département de la jeunesse";
+        return view('layouts.departement',compact('headTitle','headTitle'));
     }
 
     /**

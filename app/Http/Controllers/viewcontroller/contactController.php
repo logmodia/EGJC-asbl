@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\viewcontroller;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class activityController extends Controller
+class contactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class activityController extends Controller
      */
     public function index()
     {
-        //
+        $headTitle = "Nous contacter";
+        return view('layouts.contact',compact('headTitle','headTitle'));
     }
 
     /**

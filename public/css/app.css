@@ -217,6 +217,8 @@ input[type=checkbox] {
   font-family: "Exo 2", "sans-serif";
   color: #141003;
   font-weight: bolder;
+  text-align: center;
+  padding: 0px 10px 0px 10px;
 }
 
 @-webkit-keyframes width-grow {
@@ -494,10 +496,11 @@ input[type=checkbox] {
 }
 
 .savoir-plus {
+  display: inline-block;
   color: white;
   font-size: 1.7rem;
   background-color: #d89205;
-  padding: 15px;
+  padding: 10px;
   margin-top: 50px;
   border-radius: 10px;
 }
@@ -1161,6 +1164,23 @@ input[type=checkbox] {
 }
 .formContainer_form input[type=checkbox] {
   margin-left: 50px;
+}
+
+.dash-maincontainer {
+  display: grid;
+  grid-template-columns: 0.5fr 3fr;
+}
+.dash-maincontainer_menu {
+  border: 1px solid black;
+}
+
+.formYearvision_f-inputYear {
+  margin-bottom: 0px !important;
+}
+.formYearvision_search-YearInput {
+  display: block;
+  text-align: right;
+  color: #da9305;
 }
 
 .footer {

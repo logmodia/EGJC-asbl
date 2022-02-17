@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content0')
+    @include("layouts.partials.header")
+    
     <section class="presentation">
         <h2 class="presentation_title title-h2">Présentation de l'Eglise</h2>
         

@@ -32,7 +32,7 @@
             La mission principale et les objectifs de l'EGJC ...
           </p>
 
-          <button class = "savoir-plus">En savoir plus...</button>
+          <a href="{{ route('about_index')}}" class = "savoir-plus">En savoir plus...</a>
 
         </div>
 

@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\viewcontroller;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class newsController extends Controller
+class aboutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class newsController extends Controller
      */
     public function index()
     {
-        //
+        $headTitle = "A propos de nous";
+        return view('layouts.about',compact('headTitle','headTitle'));
     }
 
     /**

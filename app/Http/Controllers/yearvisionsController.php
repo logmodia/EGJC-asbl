@@ -26,7 +26,7 @@ class yearvisionsController extends Controller
      */
     public function create()
     {
-        return view('layouts.features.yearvision');
+        return view('layouts.features.dash_yearvision');
     }
 
     /**

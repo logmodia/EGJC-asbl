@@ -2,29 +2,33 @@
 
 @section('content0')
 
-    <div class="py-12">
-        <nav class="nav-h">
-            <div class="nav-h_item-container">
-                <li class="nav-h_item-container_item"><a href="{{ route('yearvision_create') }}">Vision de l'année</a></li>
-                <li class="nav-h_item-container_item"><a href="/about">A propos de nous</a></li>
-                <li class="nav-h_item-container_item"><a href="/activity">Activités</a></li>
-                <li class="nav-h_item-container_item"><a href="/news">Actualités</a></li>
-                <li class="nav-h_item-container_item"><a href="/departement">Département</a></li>
-                <li class="nav-h_item-container_item"><a href="/event">Evènements</a></li>
-                <li class="nav-h_item-container_item"><a href="/gallery">Gallérie</a></li>
-                
-            </div>
-        
-        </nav>
+<div class="dash-maincontainer py-12">
 
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <!-- <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
-                </div>
-            </div> -->
-            @yield('content1')
+    <div class="dash-maincontainer_menu">
+
+        <div class="dash-maincontainer_menu_yearVision h_4">
+            <a class="dash-maincontainer_menu_yearVision_yearVision-route" href="{{ route('yearvision_create') }}">Vision de l'année</a>
+            <div class="dash-maincontainer_menu_yearVision_box-InputRadio">
+                <input class="dash-maincontainer_menu_yearVision_box-Input_radio" type="radio" value="/vision/store" x-model="route">
+                <input class="dash-maincontainer_menu_yearVision_box-Input_radio" type="radio" value="/vision/update'" x-model="route">
+                <input class="dash-maincontainer_menu_yearVision_box-Input_radio" type="radio" value="/vision/delete" x-model="route">
+            </div>
         </div>
+        <div class="dash-maincontainer_menu_yearVision h_4">
+            <a class="dash-maincontainer_menu_yearVision_yearVision-route" href="{{ route('yearvision_create') }}">A propos de nous</a>
+            <div class="dash-maincontainer_menu_yearVision_box-InputRadio">
+                <input class="dash-maincontainer_menu_yearVision_box-Input_radio" type="radio" value="/vision/store" x-model="route">
+                <input class="dash-maincontainer_menu_yearVision_box-Input_radio" type="radio" value="/vision/update'" x-model="route">
+                <input class="dash-maincontainer_menu_yearVision_box-Input_radio" type="radio" value="/vision/delete" x-model="route">
+            </div>
+        </div>
+
     </div>
+
+    <div class="dash-maincontainer_content">
+        @yield('content1')
+        
+    </div>
+</div>
 
 @endsection

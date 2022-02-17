@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\viewcontroller;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class contactController extends Controller
+class preachingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class contactController extends Controller
      */
     public function index()
     {
-        //
+        $headTitle = "Nos prédications";
+        return view('layouts.preaching',compact('headTitle','headTitle'));
     }
 
     /**

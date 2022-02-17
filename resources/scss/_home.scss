@@ -294,10 +294,11 @@
   }
 
   .savoir-plus {
+    display: inline-block;
     color: white;
     font-size : $p3;
     background-color: $color-darkOrange-1;
-    padding : 15px;
+    padding : 10px;
     margin-top : 50px;
     border-radius : 10px;
   }

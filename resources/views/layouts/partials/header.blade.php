@@ -13,7 +13,7 @@
     
     <div class="bannerHeader_pageTitle-box">
         <div class="bannerHeader_pageTitle-box_titleContainer">
-            <h2 class = "bannerHeader_pageTitle-box_titleContainer_title h_3">Bienvenue !</h2>
+            <h2 class = "bannerHeader_pageTitle-box_titleContainer_title h_3">{{ $headTitle }}</h2>
         </div>
     </div>
 </div>

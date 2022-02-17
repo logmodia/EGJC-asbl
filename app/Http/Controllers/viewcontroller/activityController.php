@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\viewcontroller;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class eventController extends Controller
+class activityController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class eventController extends Controller
      */
     public function index()
     {
-        //
+        $headTitle = "Nos activités de la semaine";
+        return view('layouts.activity',compact('headTitle','headTitle'));
     }
 
     /**

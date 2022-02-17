@@ -1,0 +1,9 @@
+.dash-maincontainer{
+    display : grid;
+    grid-template-columns: 0.5fr 3fr;
+    &_menu{
+        border: 1px solid black;
+    }
+}
+
+@import  '_yearvision_form';
