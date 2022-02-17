@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content0')
+    @include("layouts.partials.header")
+    
     <div class="formContainer">
         <form class="formContainer_form" method="POST" action="#">
             <label class="formContainer_form_label text_p6" for="f-name">Nom et prénom *</label>

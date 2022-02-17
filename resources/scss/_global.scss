@@ -47,3 +47,69 @@
 .option_0{
     color : rgb(184, 32, 32);
 }
+
+.formContainer{
+    width: 100%;
+    border-radius: 5px;
+    background-color: #fcf9f9;
+    padding: 20px; 
+}
+
+.form{
+    margin : 30px auto;
+    width: 50%;
+    padding: 30px;
+}
+
+input[type=text],input[type=email],input[type=number], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: $color-darkOrange-1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+    padding: 5px;
+    font-size: $p5;
+
+}
+
+.form_btn {
+    background-color: $color-darkOrange-1 !important;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+    padding: 5px;
+    font-size: $p5;
+
+}
+
+.btnContainer{
+    text-align: center;
+    margin-top: 40px;
+}
+
+input[type=checkbox]{
+    margin-left: 50px;
+}
+
+.error-txt{
+    color: red;
+    font-size: $p6;
+}
+
+.input-UC{
+    text-transform: uppercase;
+}

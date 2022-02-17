@@ -3,7 +3,9 @@ body{
     font-family: $font-yonane, sans-serif;
 }
 @import  '_global';
+
 @import  '_header';
+
 @import  '_home';
 @import  '_about';
 @import  '_activity';
@@ -13,5 +15,7 @@ body{
 @import  '_gallery';
 @import  '_preaching';
 @import  '_contact';
+@import  './features/dashboard/_dashboard';
+
 @import  '_footer';
 

@@ -1,5 +1,5 @@
 body {
-  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-family: "Yanone Kaffeesatz", "sans-serif", sans-serif;
 }
 
 .h_2 {
@@ -52,6 +52,70 @@ body {
   color: #b82020;
 }
 
+.formContainer {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #fcf9f9;
+  padding: 20px;
+}
+
+.form {
+  margin: 30px auto;
+  width: 50%;
+  padding: 30px;
+}
+
+input[type=text], input[type=email], input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #d89205;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  padding: 5px;
+  font-size: 1.3rem;
+}
+
+.form_btn {
+  background-color: #d89205 !important;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  padding: 5px;
+  font-size: 1.3rem;
+}
+
+.btnContainer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+input[type=checkbox] {
+  margin-left: 50px;
+}
+
+.error-txt {
+  color: red;
+  font-size: 1.1rem;
+}
+
+.input-UC {
+  text-transform: uppercase;
+}
+
 .nav-h {
   display: flex;
   justify-content: center;
@@ -82,147 +146,105 @@ body {
 
 .bannerHeader {
   position: relative;
-  margin-bottom: 0px;
-  width: 100%;
-  height: 600px;
-  max-height: 600px;
 }
-.bannerHeader_containerTitle {
-  max-width: 40%;
-  text-align: center;
-  display: flex;
+.bannerHeader_container-homeTitle {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 60px;
+  top: 100px;
+  overflow: hidden;
+  z-index: 2;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  line-height: 1;
-  padding-top: 80px;
-  max-height: 600px;
+  text-align: justify;
 }
-.bannerHeader_containerTitle_h1 {
-  color: #da9305;
-  font-family: "Teko", sans-serif;
-  font-weight: bold;
+.bannerHeader_container-homeTitle_h1 {
+  font-family: "Teko", "sans-serif";
   font-size: 5rem;
-  max-height: 600px;
+  color: #fdaa05;
+  font-weight: bolder;
+  line-height: 1;
+  letter-spacing: 1px;
 }
-.bannerHeader_containerTitle_h5 {
-  color: #dad5d5;
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding-bottom: 5px;
-  font-family: "Teko", sans-serif;
-  word-spacing: 3px;
+.bannerHeader_container-homeTitle_h5 {
+  font-size: 1.5rem;
+  color: #fdaa05;
+  letter-spacing: 1px;
 }
-.bannerHeader_containerTitle_bibleImg {
-  max-width: 50px;
-  max-height: 50px;
+.bannerHeader_container-homeTitle_bibleImg {
+  width: 3rem;
+  height: 3rem;
 }
-.bannerHeader_containerTitle_verse {
-  color: #dad5d5;
-  font-size: calc(0.5rem + 0.5vw);
-  font-weight: bold;
-  padding: 10px;
+.bannerHeader_container-homeTitle_verse {
+  font-size: 1.3rem;
+  color: white;
+  letter-spacing: 2px;
 }
-.bannerHeader_container-Trapeze {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  max-height: 600px;
-}
-.bannerHeader_container-Trapeze_purpleTrapeze {
+.bannerHeader_bgImg-container_photo {
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
+}
+.bannerHeader_bgImg-container_purpleTrapeze {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 60%;
-  max-height: 600px;
-  animation: 4s reverse changeWidth;
-}
-.bannerHeader_container-bgImg {
-  z-index: -2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-.bannerHeader_container-bgImg_photo {
-  width: 100%;
-  max-height: 600px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 100%;
+  z-index: 1;
+  animation: 3s reverse width-grow;
 }
 .bannerHeader_pageTitle-box {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  border: 3px solid yellow;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  padding: 0px 50px 0px 50px;
-  height: 600vh;
-  max-height: 600px;
+  top: 25%;
+  right: 20%;
+  z-index: 3;
 }
 .bannerHeader_pageTitle-box_titleContainer {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bannerHeader_pageTitle-box_titleContainer_title {
+  font-family: "Exo 2", "sans-serif";
+  color: #141003;
+  font-weight: bolder;
+  text-align: center;
+  padding: 0px 10px 0px 10px;
 }
 
-/* .bannerHeader {
-    position: relative;
-    isolation: isolate;
-    border: 3px solid red;
-    z-index:0;
-    &_containerTitle {
-        z-index: 3;
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        img {
-            max-width: 4rem;
-        }
-    }
-    &_container-Trapeze {
-        z-index: 2;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    &_container-bgImg {
-        z-index: 1;
-        //position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-    &_pageTitle-box {
-
-    }
-} */
-@-webkit-keyframes changeWidth {
+@-webkit-keyframes width-grow {
   from {
     width: 60%;
   }
   to {
     width: 100%;
-    height: 700px;
   }
 }
-@keyframes changeWidth {
+
+@keyframes width-grow {
   from {
     width: 60%;
   }
   to {
     width: 100%;
-    height: 700px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .bannerHeader_container-homeTitle_h1 {
+    font-size: 1rem;
+  }
+
+  .bannerHeader_container-homeTitle_h1 {
+    font-size: 1rem;
   }
 }
 .about {
@@ -311,7 +333,7 @@ body {
   max-height: 600px;
 }
 .yearVision_textBox {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Exo 2", "sans-serif", sans-serif;
   font-weight: bolder;
   width: 50%;
 }
@@ -328,7 +350,7 @@ body {
 }
 .yearVision_textBox_h3-title {
   color: #da9305;
-  font-size: calc(5rem + 0.7vw);
+  font-size: calc(4rem + 0.7vw);
   margin-left: 100px;
 }
 
@@ -474,10 +496,11 @@ body {
 }
 
 .savoir-plus {
+  display: inline-block;
   color: white;
   font-size: 1.7rem;
   background-color: #d89205;
-  padding: 15px;
+  padding: 10px;
   margin-top: 50px;
   border-radius: 10px;
 }
@@ -831,7 +854,7 @@ body {
   display: block;
 }
 .committee_cardContainer_card_name {
-  font-family: "Arvo", sans-serif;
+  font-family: "Arvo", "sans-serif", sans-serif;
   font-size: 1.2rem;
   color: white;
   text-align: center;
@@ -874,7 +897,7 @@ body {
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
-  font-family: "Teko", sans-serif;
+  font-family: "Teko", "sans-serif", sans-serif;
   text-align: center;
   background-color: rgba(117, 115, 117, 0.5);
 }
@@ -894,7 +917,7 @@ body {
   width: 80%;
 }
 .event_calendarBox_mothBox_mothName {
-  font-family: "Arvo";
+  font-family: "Arvo", "sans-serif";
   border-bottom: 1px solid #fdaa05;
 }
 .event_calendarBox_mothBox_eventContainer {
@@ -1112,7 +1135,7 @@ body {
   width: 50%;
   padding: 30px;
 }
-.formContainer_form input[type=text], .formContainer_form input[type=email], .formContainer_form select, .formContainer_form textarea {
+.formContainer_form input[type=text], .formContainer_form input[type=email], .formContainer_form input[type=number], .formContainer_form select, .formContainer_form textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -1141,6 +1164,23 @@ body {
 }
 .formContainer_form input[type=checkbox] {
   margin-left: 50px;
+}
+
+.dash-maincontainer {
+  display: grid;
+  grid-template-columns: 0.5fr 3fr;
+}
+.dash-maincontainer_menu {
+  border: 1px solid black;
+}
+
+.formYearvision_f-inputYear {
+  margin-bottom: 0px !important;
+}
+.formYearvision_search-YearInput {
+  display: block;
+  text-align: right;
+  color: #da9305;
 }
 
 .footer {
@@ -2111,13 +2151,13 @@ select {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 .px-1 {
   padding-left: 0.25rem;

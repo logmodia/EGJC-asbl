@@ -1,6 +1,8 @@
 @extends("layouts.app")
 
-@section("content")
+@section("content0")
+  @include("layouts.partials.header")
+  
 <section class="activity">
 
       <div class="activity_cardContainer">
