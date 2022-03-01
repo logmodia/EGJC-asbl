@@ -9,5 +9,7 @@ class Yearvision extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['year','subject','details'];
+    protected $fillable = ['year','subject','details','subject_prefix'];
+
+    protected $primaryKey = 'yearvision_id';
 }

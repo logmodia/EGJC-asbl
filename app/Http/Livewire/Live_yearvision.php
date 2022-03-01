@@ -7,44 +7,36 @@ use App\Models\Yearvision;
 
 class Live_yearvision extends Component
 {
-
-    public $count = 0;
+    //Help to select 
+    public $formView;
+    public $form_RouteAction;
+    public $subject_prefix;
     public $subject;
     public $year;
     public $details;
     public $yearvision_id;
+    public $id_0;
     public $yearFound;
     public $activUpdate;
-
- 
-
-    public function increment()
-
-    {
-
-        $this->count++;
-
-    }
-    public function dincrement()
-
-    {
-
-        $this->count--;
-
-    }
+    public $yearvision;
 
     public function lw_search_yearvision()
     {
         $yearvision = Yearvision::where('year',$this->year)->first();
-        
+
         if (isset($yearvision)){
             $this->subject = $yearvision->subject;
             $this->details = $yearvision->details;
+            $this->subject_prefix = $yearvision->subject_prefix;
             $this->yearvision_id = $yearvision->yearvision_id;
+            $this->id_0 = $yearvision->yearvision_id;
             
             $this->yearFound = true;
         }else{
             $this->yearFound = false;
+
+            $this->reset(['subject','details','subject_prefix','yearvision_id']);
+            
 
         }
 
@@ -52,12 +44,17 @@ class Live_yearvision extends Component
         //['subject'=>Yearvision::where('year','like',"%{$this->year}%")->get()]
     }
 
-    public function activUpdate()
+    public function updated()
     {
-        if ($this->activUpdate === false){
-            $this->activUpdate = true;
-        }else{
-            $this->activUpdate = true;
+        if ($this->formView === 'create'){
+            $this->form_RouteAction = "{{Route('yearvision_store')}}";
+            //dd($this->form_RouteAction);
+            
+        }elseif($this->formView === 'edit'){
+            $this->form_RouteAction = "{{Route('yearvision_update')}}";
+
+        }elseif($this->formView === 'destroy'){
+            $this->form_RouteAction = "{{Route('yearvision_delete')}}";
 
         }
     }

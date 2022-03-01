@@ -13,8 +13,8 @@
 }
 
 .h_3{
-    color : $color-orange;
-    font-size : $h3;
+    color : $color-orange !important;
+    font-size : $h3 !important;
 }
 
 .h_4{
@@ -90,8 +90,21 @@ input[type=submit] {
     border: 1px solid #ccc;
     border-radius: 4px;
     cursor: pointer;
-    width: 100px;
-    padding: 5px;
+    width: max-content;
+    padding: 5px 10px 5px 10px;
+    font-size: $p5;
+    letter-spacing: 1px !important;
+
+}
+
+.form_btn-danger {
+    background-color: rgb(209, 38, 38) !important;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    width: max-content;
+    padding: 5px 10px 5px 10px;
     font-size: $p5;
 
 }
@@ -110,6 +123,95 @@ input[type=checkbox]{
     font-size: $p6;
 }
 
-.input-UC{
+.input-UppCase{
     text-transform: uppercase;
+}
+
+.hidden-input{
+    visibility: hidden;
+}
+
+.alertBox{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin : auto 0;
+    z-index: 10;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-color: rgb(202, 187, 202);
+    padding : 50px 0px 50px 0px;
+    
+    &_content{
+        margin: 0 auto;
+        text-align: center;
+        width: 50%;
+        box-shadow: 3px 3px 5px gray;
+        border-radius: 4px;
+        background-color: $color-bg-alert;
+        padding : 0px 0px 20px 0px;
+
+        &_message{
+            font-size: $p5;
+            color: white;
+            padding: 15px 0px 15px 0px;
+        }
+        
+        &_icon{
+            width : 100%;
+            height : 5rem;
+            text-align: center;
+            margin : 0px 0px 20px 0px;
+
+            &_ion{
+
+                color: white;
+                height : 5rem;
+                width : 5rem;
+
+            }
+        }
+
+        &_button{
+            color : white;
+            font-size : $p5;
+            padding:  3px 0px 0px 0px;
+            
+            border: 1px solid white;
+            border-radius: 5px;
+            width : 5rem;
+            
+        }
+
+    }
+}
+
+.link-btn{
+    color : white;
+    font-size : $p5;
+    padding:  5px 30px 3px 30px;
+    
+    border: 1px solid white;
+    border-radius: 5px;
+    width : 5rem;
+}
+
+//Fonts -----------------------------------------
+.font-yonane{
+    font-family: $font-yonane !important;
+}
+.font-exo2{
+    font-family: $font-exo2 !important;
+}
+.font-teko{
+    font-family: $font-teko !important;
+}
+.font-arvo{
+    font-family: $font-arvo !important;
+}
+.font-tangerine{
+    font-family: $font-tangerine !important;
 }

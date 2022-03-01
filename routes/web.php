@@ -11,6 +11,7 @@ use App\Http\Controllers\viewcontroller\activityController;
 use App\Http\Controllers\viewcontroller\homepageController;
 use App\Http\Controllers\viewcontroller\preachingController;
 use App\Http\Controllers\viewcontroller\departementController;
+use App\Http\Controllers\viewcontroller\messageboxController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,9 +34,18 @@ Route::get('/gallery',[galleryController::class,'index'])->name('gallery_index')
 Route::get('/news',[newsController::class,'index'])->name('news_index');
 Route::get('/preaching',[preachingController::class,'index'])->name('preaching_index');
 
+//------------------------------------------- Dashboard -------------------------------------------
+
+Route::get('/dashboard/messagebox/{data?}',[messageboxController::class,'index'])->name('messagebox');
+
 Route::get('/vision/create',[yearvisionsController::class,'create'])->name('yearvision_create');
+Route::get('/vision/edit/{yearvison_id?}',[yearvisionsController::class,'edit'])->name('yearvision_edit')->whereNumber('yearvison_id');
+Route::get('/vision/destroy',[yearvisionsController::class,'destroy'])->name('yearvision_destroy');
+Route::get('/vision/list',[yearvisionsController::class,'index'])->name('yearvision_list');
+
 Route::post('/vision/store',[yearvisionsController::class,'store'])->name('yearvision_store');
 Route::post('/vision/update',[yearvisionsController::class,'update'])->name('yearvision_update');
+Route::post('/vision/delete/{id?}',[yearvisionsController::class,'delete'])->name('yearvision_delete')->whereNumber('id');
 
 Route::group(['middleware' => ['auth']], function() {
     /**

@@ -24,9 +24,14 @@
     </head>
     <body>
        @include("layouts.partials.nav")
-       @yield("content0")
+            @yield("content0")
        @include("layouts.partials.footer")
 
        @livewireScripts
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
     </body>
+
 </html>

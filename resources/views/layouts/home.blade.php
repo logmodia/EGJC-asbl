@@ -85,7 +85,7 @@
       <div class="yearVision_textBox">
         <h2 class = "yearVision_textBox_title title-h2">Vision de l'année</h2>
         <h3 class = "yearVision_textBox_h3-year">{{ $year }}</h3>
-        <h3 class = "yearVision_textBox_h3-year">Année de</h3>
+        <h3 class = "yearVision_textBox_h3-year">{{ $subject_prefix }}</h3>
         <h3 class = "yearVision_textBox_h3-title">{{ Str::upper($Yearvision) }}</h3>
       </div>
 

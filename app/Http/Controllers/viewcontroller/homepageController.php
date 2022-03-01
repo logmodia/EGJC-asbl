@@ -11,9 +11,16 @@ class homepageController extends Controller
     public function index() {
         $headTitle = "Bienvenue !";
         $year = Yearvision::max('year');
-        $Yearvision = Yearvision::where('year',$year)->first('subject');
-        $Yearvision = $Yearvision['subject'];
+        $vision = Yearvision::where('year',$year)->first();
+        $Yearvision = $vision['subject'];
+        $subject_prefix = $vision['subject_prefix'];
+        $yearvision_id = $vision['yearvision_id'];
 
-        return view('layouts.home',compact(['year'=>'year','yearvision'=>'Yearvision','headTitle'=>'headTitle']));
+        return view('layouts.home',compact([
+            'year'=>'year',
+            'yearvision'=>'Yearvision',
+            'headTitle'=>'headTitle',
+            'subject_prefix'=>'subject_prefix'
+        ]));
     }
 }

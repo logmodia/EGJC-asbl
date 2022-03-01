@@ -3,6 +3,39 @@
     grid-template-columns: 0.5fr 3fr;
     &_menu{
         border: 1px solid black;
+        background-color: $color-darkPurple;
+
+        &_yearVision{
+            &_box-menuItem{
+                
+                &_listItem{
+                    &_item{
+                        
+                        &_link{
+                            
+                            &_Input-radio{
+                                cursor: pointer;
+                            }
+                            &_Input-label{
+                                cursor: pointer;
+                                color: white;
+                                font-size : $p6;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+    }
+
+    &_content { 
+
+        background : rgb(238, 242, 255);
     }
 }
 

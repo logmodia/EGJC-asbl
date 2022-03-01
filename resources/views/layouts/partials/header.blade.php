@@ -7,7 +7,7 @@
         <p class = "bannerHeader_container-homeTitle_verse">Juges 6:25-26</p>
     </div>
     <div class="bannerHeader_bgImg-container">
-        <img class="bannerHeader_bgImg-container_photo" src='{{Storage::url("assets/img_header1.jpg")}}'  alt="Imge de fond de l'en-tête de la page">
+        <img class="bannerHeader_bgImg-container_photo zoom-in-zoom-out" src='{{Storage::url("assets/img_header1.jpg")}}'  alt="Imge de fond de l'en-tête de la page">
         <img class="bannerHeader_bgImg-container_purpleTrapeze" src='{{Storage::url("assets/Trapeze_violet_header.webp")}}' alt="Imge de fond de l'en-tête de la page">
     </div>
     
