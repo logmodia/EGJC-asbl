@@ -10,7 +10,6 @@
             <p class="alertBox_content_message">Suppression accomplie avec succès</p>
         @endif
 
-        {{Session::get('success')}}
 
         <div class="alertBox_content_icon">
             <ion-icon class="alertBox_content_icon_ion" name="checkmark-circle-outline"></ion-icon>
@@ -19,7 +18,7 @@
         @if(Session::get('success') === "created")
             <button class="alertBox_content_button" x-on:click ="reload">OK</button>
         @elseif(Session::get('success') === "updated")
-            <a href="{{ route('yearvision_list') }}" class="link-btn">OK</a>
+            <a href="{{ Session::get('route') }}" class="link-btn">OK</a>
         @elseif(Session::get('success') === "deleted")
             <a href="{{ route('yearvision_list') }}" class="link-btn">OK</a>
         @endif

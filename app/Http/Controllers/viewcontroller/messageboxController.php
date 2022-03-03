@@ -7,16 +7,16 @@ use App\Http\Controllers\Controller;
 
 class messageboxController extends Controller
 {
-    public function index(request $request, $data=null,$data2=null){
+    public function index(request $request, $id=null,$action=null,$actionRoute,$cancelRoute=Null){
 
-        $id = $data;
-        $action = "delete";
-        $actionRoute = 'yearvision_delete';
-        $cancelRoute = 'yearvision_list';
+        $id = $id;
+        $action = $action;
+        $actionRoute = route($actionRoute);
+        $cancelRoute = route($cancelRoute);
 
-        $x1 = $data2;
+       // $x1 = $data2;
 
-        //dd($data2);
+        //dd($id,$action,$actionRoute,$cancelRoute);
 
         return view('layouts.features.messagebox', compact([
             'id' => 'id',

@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\viewcontroller;
-use App\Http\Controllers\Controller;
+use App\Models\weektopic;
 
 use App\Models\Yearvision;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class homepageController extends Controller
 {
@@ -16,11 +17,15 @@ class homepageController extends Controller
         $subject_prefix = $vision['subject_prefix'];
         $yearvision_id = $vision['yearvision_id'];
 
+        $weektopic = weektopic::latest()->first();
+
         return view('layouts.home',compact([
             'year'=>'year',
             'yearvision'=>'Yearvision',
             'headTitle'=>'headTitle',
-            'subject_prefix'=>'subject_prefix'
+            'subject_prefix'=>'subject_prefix',
+
+            'weektopic'=>'weektopic'
         ]));
     }
 }

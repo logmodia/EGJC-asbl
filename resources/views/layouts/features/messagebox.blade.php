@@ -19,16 +19,19 @@
             <!--footer-->
             <div class="p-3  mt-2 text-center space-x-4 md:block">
                 
-                <form class="inline-block" method="get" action="{{ route($cancelRoute)}}">
+                <form class="inline-block" method="get" action="{{ $cancelRoute}}">
                     @csrf
                     <button class="mb-2 md:mb-0 bg-white px-5 py-2 text-sm shadow-sm font-medium tracking-wider border text-gray-600 rounded-full hover:shadow-lg hover:bg-gray-100">
                         Non, Annuler
                     </button>
 
                 </form>
-                <form class="inline-block" method="POST" action="{{ route($actionRoute,$id)}}">
+                <form class="inline-block" method="POST" action="{{ $actionRoute.'/'.$id}}">
                     @csrf
-                    <button type="submit" class="mb-2 md:mb-0 bg-red-500 border border-red-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-red-600">Oui, je confirme</button>
+                    <button type="submit" 
+                        class="mb-2 md:mb-0 bg-red-500 border border-red-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-red-600">
+                        Oui, je confirme
+                    </button>
 
                 </form>
             </div>

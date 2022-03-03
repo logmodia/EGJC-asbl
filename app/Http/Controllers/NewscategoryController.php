@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\weektopic;
 use Illuminate\Support\Str;
+use App\Models\newscategory;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 
-class WeektopicController extends Controller
+class NewscategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,8 @@ class WeektopicController extends Controller
      */
     public function index()
     {
-        return view('layouts.features.boards.board_weektopic')
-        ->with('weektopics',weektopic::orderBy('weekdate','desc')->get());
+        return view('layouts.features.boards.board_newscategory')
+        ->with('newscategories',newscategory::orderBy('name')->get());
     }
 
     /**
@@ -28,9 +27,9 @@ class WeektopicController extends Controller
     public function create()
     {
         //Used to select the corresponding form view when you call the form for create
-        $weektopic=[];
+        $newscategory=[];
         $formView ='create';
-        return view('layouts.features.forms.form_weektopic',compact(['formView'=>'formView', 'weektopic'=>'weektopic']));
+        return view('layouts.features.forms.form_newscategory',compact(['formView'=>'formView', 'newscategory'=>'newscategory']));
     }
 
     /**
@@ -42,20 +41,11 @@ class WeektopicController extends Controller
     public function store(Request $request)
     {
         $request->validate([ //input fields have not to be empty
-            'topic'=>['required','max:80','min:4'], // has min 4 max 4 characters
-            'verse'=>['required','max:80','min:5'],
-            'weekdate'=>['required'],
+            'name'=>['required','unique:newscategories', 'max:30','min:1'], // has min 4 max 4 characters
         ]);
 
-        /* $validatedData = $request->validate([
-            'topic' => ['required', 'unique:posts', 'max:255'],
-            'verse' => ['required'],
-        ]); */
-
-        weektopic::create([
-            'topic'=>Str::upper($request->topic),
-            'verse'=>Str::ucfirst($request->verse),
-            'weekdate'=>$request->weekdate,
+        newscategory::create([
+            'name'=>Str::ucfirst($request->name),
         ]);
         
         
@@ -68,7 +58,7 @@ class WeektopicController extends Controller
      * @param  \App\Models\weektopic  $weektopic
      * @return \Illuminate\Http\Response
      */
-    public function show(weektopic $weektopic)
+    public function show()
     {
         //
     }
@@ -82,13 +72,13 @@ class WeektopicController extends Controller
     public function edit($id = Null)
     {
         //Used to select the corresponding form view when you call the form for edit
-        $weektopic = weektopic::findOrfail($id);
+        $newscategory = newscategory::findOrfail($id);
         $formView ='edit';
-        $cancelRoute = route('weektopic_all');
+        $cancelRoute = route('newscategory_all');
 
-        return view('layouts.features.forms.form_weektopic',
+        return view('layouts.features.forms.form_newscategory',
         compact([
-            'weektopic'=>'weektopic',
+            'newscategory'=>'newscategory',
             'formView'=>'formView',
             'cancelRoute'=>'cancelRoute'
         ]));
@@ -101,24 +91,20 @@ class WeektopicController extends Controller
      * @param  \App\Models\weektopic  $weektopic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, weektopic $weektopic)
+    public function update(Request $request, newscategory $newscategory)
     {
         $request->validate([ //input fields have not to be empty
-            'topic'=>['required','max:80','min:4'], // has min 4 max 4 characters
-            'verse'=>['required','max:80','min:5'],
-            'weekdate'=>['required'],
+            'name'=>['required','max:30','min:1'],
         ]);
 
         $id = $request->id;
-        $weektopic = weektopic::where('id',$id)->firstOrFail();
+        $weektopic = newscategory::where('id',$id)->firstOrFail();
 
         $weektopic->update([
-            'topic'=>Str::upper($request->topic),
-            'verse'=>Str::ucfirst($request->verse),
-            'weekdate'=>$request->weekdate,
+            'name'=>Str::ucfirst($request->name),
         ]);
 
-        $route = route('weektopic_all');
+        $route = route('newscategory_all');
 
         return redirect()->back()
         ->with('success','updated')
@@ -133,9 +119,8 @@ class WeektopicController extends Controller
      */
     public function destroy(request $request,$id)
     {
-        weektopic::destroy($id);
+        newscategory::destroy($id);
 
-        return redirect()->action([WeektopicController::class,'index']);
+        return redirect()->action([NewscategoryController::class,'index']);
     }
-    
 }

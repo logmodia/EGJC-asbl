@@ -38,14 +38,75 @@
                     <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
                         href="{{ route('yearvision_list') }}">
                         <ion-icon name="list-outline"></ion-icon>
-                        <span class="mx-3">Toutes les années</span>
+                        <span class="mx-3">Les visions de toutes les années</span>
                     </a>
                     <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
                         href="{{Route('yearvision_create')}}">
                         <ion-icon name="add-circle-outline"></ion-icon>
-                        <span class="mx-3">Nouvelle année</span>
+                        <span class="mx-3">Nouvelle vision année</span>
                     </a>
                 </div>
+            </div>
+
+            <div x-data = "{oppen_weektopic : false}" >
+                <div x-on:click = "oppenVision=!oppenVision" 
+                    class="flex items-center mt-4 py-2 px-6 text-gray-500 bg-gray-700 bg-opacity-25 text-gray-100 hover:text-amber-400 cursor-pointer">
+                    <ion-icon name="flame-outline"></ion-icon>    
+                    <span class="mx-3 pr-8 flex-1 w-64">Thème de la semaine</span>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </div>
+                <div x-show = "oppen_weektopic">
+                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+                        href="{{ route('weektopic_all') }}">
+                        <ion-icon name="list-outline"></ion-icon>
+                        <span class="mx-3">Les thèmes de toutes les semaines</span>
+                    </a>
+                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+                        href="{{Route('weektopic_create')}}">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                        <span class="mx-3">Nouveau thème de la semaine</span>
+                    </a>
+                </div>
+            </div>
+
+            <!----------------------------- News ---------------------------------------->
+            <div x-data = "{oppenNews : false}" >
+                <div x-on:click = "oppenNews=!oppenNews" 
+                    class="flex items-center mt-4 py-2 px-6 text-gray-500 bg-gray-700 bg-opacity-25 
+                    text-gray-100 hover:text-amber-400 cursor-pointer">
+
+                    <ion-icon name="newspaper-outline"></ion-icon>    
+                    <span class="mx-3 pr-8 flex-1 w-64">Actualité</span>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                </div>
+
+                <div x-show = "oppenNews" x-data = "{oppen_NewsCategory : false}">
+                    
+                    <!-------------------- News category ------------------>
+                    <div x-on:click = "oppen_NewsCategory=!oppen_NewsCategory" 
+                        class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 
+                        text-gray-100 hover:text-amber-400 cursor-pointer">
+
+                        <ion-icon name="apps-outline"></ion-icon>
+                        <span class="mx-3">Catégories</span>
+
+                    </div>
+
+                    <div x-show = "oppen_NewsCategory" class = "px-6">
+                        <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+                            href="{{ route('newscategory_all') }}">
+                            <ion-icon name="list-outline"></ion-icon>
+                            <span class="mx-3">Toutes les catégories</span>
+                        </a>
+                        <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+                            href="{{Route('newscategory_create')}}">
+                            <ion-icon name="add-circle-outline"></ion-icon>
+                            <span class="mx-3">Nouvelle catégorie</span>
+                        </a>
+                    </div>
+                </div>
+
             </div>
 
         </nav>

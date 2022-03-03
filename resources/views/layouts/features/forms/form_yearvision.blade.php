@@ -55,8 +55,21 @@
                                                 @if($formView === 'create')
                                                         <button type="submit" class=" px-6 py-2 mx-auto block rounded-md text-lg text-indigo-100 bg-indigo-600  ">Ajouter</button>
                                                 @elseif($formView === 'edit')
-                                                        <button x-show ="confirm" type="submit" class=" px-6 py-2 mx-auto block rounded-md text-lg text-indigo-100 bg-indigo-600 ">Confirmer la modiffication</button>
-                                                        <button x-show ="action" x-on:click ="confirm = !confirm, action = !action" type="button" class=" px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600 form_btn">Appliquer</button>
+                                                        <div class = "text-center">
+                                                                <button x-show ="confirm" type="submit" 
+                                                                    class=" px-6 py-2 mx-auto rounded-md text-lg text-indigo-100 bg-indigo-600 ">
+                                                                    Confirmer la modiffication
+                                                                </button>
+                                                                <a x-show ="confirm" href="{{$cancelRoute}}" 
+                                                                    class=" px-6 py-3 mx-auto ml-5 w-20 rounded-md text-lg text-indigo-100 bg-indigo-600 form_btn ">
+                                                                    Annuler
+                                                                </a>
+                                                                <button x-show ="action" x-on:click ="confirm = !confirm, action = !action" type="button" 
+                                                                    class=" px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600 form_btn">
+                                                                    Appliquer
+                                                                </button>
+
+                                                        </div>
                                                 @endif
 
                                         </div>

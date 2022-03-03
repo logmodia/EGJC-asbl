@@ -6,7 +6,7 @@ use App\Models\Yearvision;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
-class yearvisionsController extends Controller
+class YearvisionsController extends Controller
 {
 
     /**
@@ -16,7 +16,7 @@ class yearvisionsController extends Controller
      */
     public function index()
     {
-        $yearvisions = yearvision::all();
+        $yearvisions = yearvision::orderBy('year','desc')->get();
 
         return view('livewire/lw-list-yearvision',compact('yearvisions','yearvisions'));
     }
@@ -31,7 +31,7 @@ class yearvisionsController extends Controller
         //Used to select the corresponding form view when you call the form for create
         $yearvision=[];
         $formView ='create';
-        return view('layouts.features.dash_yearvision',compact(['formView'=>'formView', 'yearvision'=>'yearvision']));
+        return view('layouts.features.forms.form_yearvision',compact(['formView'=>'formView', 'yearvision'=>'yearvision']));
     }
 
     /**
@@ -43,14 +43,6 @@ class yearvisionsController extends Controller
     public function store(Request $request)
     {
         
-        //$vision = new Yearvision();
-
-        /* $vision->year = $request->year;
-        $vision->subject = $request->subject;
-        $vision->details = $request->details;
-
-        $vision->save(); */
-
         $request->validate([ //input fields have not to be empty
             'year'=>['required','max:4','min:4','unique:yearvisions'], //year must be unique and has min 4 max 4 characters
             'subject'=>['required','max:60','min:5','unique:yearvisions'],
@@ -67,6 +59,14 @@ class yearvisionsController extends Controller
         ]);
         
         return redirect()->back()->with('success','created');
+
+        //$vision = new Yearvision();
+
+        /* $vision->year = $request->year;
+        $vision->subject = $request->subject;
+        $vision->details = $request->details;
+
+        $vision->save(); */
 
     }
 
@@ -93,8 +93,14 @@ class yearvisionsController extends Controller
         //Used to select the corresponding form view when you call the form for edit
         $yearvision = yearVision::findOrfail($yearvison_id);
         $formView ='edit';
+        $cancelRoute = route('yearvision_list');
         //dd($yearvision);
-        return view('layouts.features.dash_yearvision',compact(['yearvision'=>'yearvision','formView'=>'formView']));
+        return view('layouts.features.forms.form_yearvision',
+        compact([
+            'yearvision'=>'yearvision',
+            'formView'=>'formView',
+            'cancelRoute'=>'cancelRoute'
+    ]));
 
     }
 
@@ -125,25 +131,19 @@ class yearvisionsController extends Controller
             'details'=>Str::ucfirst($request->details)
         ]);
 
-        return redirect()->back()->with('success','updated');
+        $route = route('yearvision_list');
+
+        return redirect()->back()
+        ->with('success','updated')
+        ->with('route',$route);
 
     }
 
-    public function destroy(request $request)
-    {
-        //Used to select the corresponding form view when you call the form for delete
-        $formView ='destroy';
-
-        $request->session()->now('delete', 'Veuillez confirmer la suppression s\'il vous plait');
-        
-        return view('layouts.features.dash_yearvision',compact(['formView'=>'formView']));
-    }
-    
-    //Delete the specified resource ------------------------------------------------
-    public function delete(Request $request, $id)
+    public function destroy(request $request,$id)
     {
         yearVision::destroy($id);
 
-        return redirect()->action([yearvisionsController::class,'index']);
+        return redirect()->action([YearvisionsController::class,'index']);
     }
+    
 }

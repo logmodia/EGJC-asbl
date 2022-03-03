@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class weektopic extends Model
+class newscategory extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['topic','verse','weekdate'];
+    protected $fillable = ['name'];
 }

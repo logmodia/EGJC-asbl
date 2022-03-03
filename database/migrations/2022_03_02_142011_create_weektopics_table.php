@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddColumnSubjectprefixInYearvisions extends Migration
+class CreateWeektopicsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class AddColumnSubjectprefixInYearvisions extends Migration
      */
     public function up()
     {
-        Schema::table('yearvisions', function (Blueprint $table) {
-            $table->string('subject_prefix')->default('Année de la');
+        Schema::create('weektopics', function (Blueprint $table) {
+            $table->id();
+            $table->string('topic')->notnull();
+            $table->string('verse')->nullable();
+            $table->date('weekdate')->notnull();
+            $table->timestamps();
         });
     }
 
@@ -25,8 +29,6 @@ class AddColumnSubjectprefixInYearvisions extends Migration
      */
     public function down()
     {
-        Schema::table('yearvisions', function (Blueprint $table) {
-            $table->dropColumn('subject_prefix');
-        });
+        Schema::dropIfExists('weektopics');
     }
 }
