@@ -49,7 +49,7 @@
             </div>
 
             <div x-data = "{oppen_weektopic : false}" >
-                <div x-on:click = "oppenVision=!oppenVision" 
+                <div x-on:click = "oppen_weektopic=!oppen_weektopic" 
                     class="flex items-center mt-4 py-2 px-6 text-gray-500 bg-gray-700 bg-opacity-25 text-gray-100 hover:text-amber-400 cursor-pointer">
                     <ion-icon name="flame-outline"></ion-icon>    
                     <span class="mx-3 pr-8 flex-1 w-64">Thème de la semaine</span>
@@ -107,6 +107,29 @@
                     </div>
                 </div>
 
+            </div>
+
+            <!------------------------------ Departement -------------------->
+
+            <div x-data = "{oppen_departement : false}" >
+                <div x-on:click = "oppen_departement=!oppen_departement" 
+                    class="flex items-center mt-4 py-2 px-6 text-gray-500 bg-gray-700 bg-opacity-25 text-gray-100 hover:text-amber-400 cursor-pointer">
+                    <ion-icon name="keypad"></ion-icon>    
+                    <span class="mx-3 pr-8 flex-1 w-64">Département</span>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </div>
+                <div x-show = "oppen_departement">
+                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+                        href="{{ route('departement_all') }}">
+                        <ion-icon name="list-outline"></ion-icon>
+                        <span class="mx-3">Tous les départements</span>
+                    </a>
+                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+                        href="{{Route('departement_create')}}">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                        <span class="mx-3">Nouveau département</span>
+                    </a>
+                </div>
             </div>
 
         </nav>

@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\NewscategoryController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\YearvisionsController;
 use App\Http\Controllers\WeektopicController;
+use App\Http\Controllers\YearvisionsController;
+use App\Http\Controllers\DepartementsController;
+use App\Http\Controllers\NewscategoryController;
 use App\Http\Controllers\viewcontroller\newsController;
 use App\Http\Controllers\viewcontroller\aboutController;
 use App\Http\Controllers\viewcontroller\eventController;
@@ -70,6 +71,17 @@ Route::get('/newscategory/edit/{id?}',[NewscategoryController::class,'edit'])->n
 Route::post('/newscategory/store',[NewscategoryController::class,'store'])->name('newscategory_store');
 Route::post('/newscategory/update',[NewscategoryController::class,'update'])->name('newscategory_update');
 Route::post('/newscategory/destroy/{id?}',[NewscategoryController::class,'destroy'])->name('newscategory_destroy')->whereNumber('id');
+
+
+//Departement -----------------------------------------------------------------------------------
+
+Route::get('/departement/all',[DepartementsController::class,'index'])->name('departement_all');
+Route::get('/departement/create',[DepartementsController::class,'create'])->name('departement_create');
+Route::get('/departement/edit/{id?}',[DepartementsController::class,'edit'])->name('departement_edit')->whereNumber('id');
+
+Route::post('/departement/store',[DepartementsController::class,'store'])->name('departement_store');
+Route::post('/departement/update',[DepartementsController::class,'update'])->name('departement_update');
+Route::post('/departement/destroy/{id?}',[DepartementsController::class,'destroy'])->name('departement_destroy')->whereNumber('id');
 
 
 

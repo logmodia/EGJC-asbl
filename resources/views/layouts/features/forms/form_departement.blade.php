@@ -5,9 +5,9 @@
                 <x-alertBox/>
         @else
                 @if($formView === 'create')
-                <form class="mb-5" method="post" action = "{{ Route('newscategory_store') }}">
+                <form class="mb-5" method="post" action = "{{ Route('departement_store') }}">
                 @elseif($formView === 'edit')
-                <form class="mb-5" x-data ="{ action : true, confirm : false}" method="post" action = "{{ Route('newscategory_update') }}">
+                <form class="mb-5" x-data ="{ action : true, confirm : false}" method="post" action = "{{ Route('departement_update') }}">
                 @endif
                         @csrf()
                         
@@ -16,32 +16,32 @@
                                         
                                         @if($formView === 'create')
                                             <h1 class="text-center text-2xl font-bold text-gray-500 mb-10 h_3">
-                                                Nouvelle catégorie d'actualité
+                                                Nouveau departement
                                             </h1>
                                         @elseif($formView === 'edit')
                                             <h1 class="text-center text-2xl font-bold text-gray-500 mb-10 h_3">
-                                                Modiffier une catégorie d'actualité
+                                                Modiffier une departement
                                             </h1>
                                         @endif
                                         
                                         <div class="space-y-4">
                                                 <div>
-                                                        <label for="name" class="text-lx text_p6">Thème de la semaine*</label>
+                                                        <label for="name" class="text-lx text_p6">Département*</label>
 
-                                                        <input type="text" name ="name" id="name" 
-                                                            value = "{{ $newscategory ? $newscategory->name:'' }}" 
+                                                        <input type="text" name ="dep_name" id="dep_name" 
+                                                            value = "{{ $departement ? $departement->dep_name:'' }}" 
                                                             class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md " 
-                                                            placeholder="Thème..."
+                                                            placeholder="Département..."
                                                         />
 
                                                         @if($errors->any())
-                                                                <p class = "error-txt">{{ $errors->first('name') }}</p>
+                                                                <p class = "error-txt">{{ $errors->first('dep_name') }}</p>
                                                         @endif
                                                 </div>
                                                
 
-                                                <input class = "hidden" type="number" name = "id" 
-                                                    value = "{{ $newscategory ? $newscategory->id:'' }}"
+                                                <input class = "hidden" type="number" name = "dep_id" 
+                                                    value = "{{ $departement ? $departement->dep_id:'' }}"
                                                 >
                                                 
                                                 @if($formView === 'create')

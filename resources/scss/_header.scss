@@ -80,9 +80,12 @@
     }
 
     &_bgImg-container{
+        overflow: hidden;
         &_photo{
             object-fit: cover;
             display: block;
+
+            animation : zoom_inout 30s infinite ease-in;
         }
 
         &_purpleTrapeze{
@@ -92,7 +95,7 @@
             width: 60%;
             height: 100%;
             z-index: 1;
-            animation: 3s reverse width-grow;
+            animation: 2s reverse width-grow;
         }
     }
 
@@ -146,5 +149,15 @@
     }
     .bannerHeader_container-homeTitle_h1{
         font-size: $h6;
+    }
+  }
+
+  @keyframes zoom_inout {
+    0% {
+        transform: scale(1.4);
+    }
+    
+    100% {
+        transform: scale(1);
     }
   }
