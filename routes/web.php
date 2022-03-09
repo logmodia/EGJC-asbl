@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WeektopicController;
+use App\Http\Controllers\MemberRolesController;
 use App\Http\Controllers\YearvisionsController;
 use App\Http\Controllers\DepartementsController;
 use App\Http\Controllers\NewscategoryController;
@@ -83,6 +84,15 @@ Route::post('/departement/store',[DepartementsController::class,'store'])->name(
 Route::post('/departement/update',[DepartementsController::class,'update'])->name('departement_update');
 Route::post('/departement/destroy/{id?}',[DepartementsController::class,'destroy'])->name('departement_destroy')->whereNumber('id');
 
+//Member role -----------------------------------------------------------------------------------
+
+Route::get('/memberRole/all',[MemberRolesController::class,'index'])->name('memberRole_all');
+Route::get('/memberRole/create',[MemberRolesController::class,'create'])->name('memberRole_create');
+Route::get('/memberRole/edit/{id?}',[MemberRolesController::class,'edit'])->name('memberRole_edit')->whereNumber('id');
+
+Route::post('/memberRole/store',[MemberRolesController::class,'store'])->name('memberRole_store');
+Route::post('/memberRole/update',[MemberRolesController::class,'update'])->name('memberRole_update');
+Route::post('/memberRole/destroy/{id?}',[MemberRolesController::class,'destroy'])->name('memberRole_destroy')->whereNumber('id');
 
 
 Route::group(['middleware' => ['auth']], function() {

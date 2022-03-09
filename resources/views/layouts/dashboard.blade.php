@@ -129,7 +129,22 @@
                         <ion-icon name="add-circle-outline"></ion-icon>
                         <span class="mx-3">Nouveau département</span>
                     </a>
+
+                    <div class="flex items-center mt-4 py-2 px-6 text-gray-500 bg-gray-700 bg-opacity-25 text-gray-100 hover:text-amber-400 cursor-pointer">
+                        <span class="mx-3 pr-8 flex-1 w-64">Roles</span>
+                    </div>
+                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+                        href="{{ route('memberRole_all') }}">
+                        <ion-icon name="list-outline"></ion-icon>
+                        <span class="mx-3">Tous les rôles</span>
+                    </a>
+                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+                        href="{{Route('memberRole_create')}}">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                        <span class="mx-3">Nouveau rôle</span>
+                    </a>
                 </div>
+
             </div>
 
         </nav>

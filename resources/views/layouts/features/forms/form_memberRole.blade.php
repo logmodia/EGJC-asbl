@@ -5,9 +5,10 @@
                 <x-alertBox/>
         @else
                 @if($formView === 'create')
-                <form class="mb-5" method="post" action = "{{ Route('departement_store') }}">
+                <form class="mb-5" method="post" action = "{{ Route('memberRole_store') }}">
                 @elseif($formView === 'edit')
-                <form class="mb-5" x-data ="{ action : true, confirm : false}" method="post" action = "{{ Route('departement_update') }}">
+                <form class="mb-5" x-data ="{ action : true, confirm : false}" method="post"
+                action = "{{ Route('memberRole_update') }}">
                 @endif
                         @csrf()
                         
@@ -16,32 +17,54 @@
                                         
                                         @if($formView === 'create')
                                             <h1 class="text-center text-2xl font-bold text-gray-500 mb-10 h_3">
-                                                Nouveau département
+                                                Nouveau rôle
                                             </h1>
                                         @elseif($formView === 'edit')
                                             <h1 class="text-center text-2xl font-bold text-gray-500 mb-10 h_3">
-                                                Modiffier un département
+                                                Modiffier un rôle
                                             </h1>
                                         @endif
                                         
                                         <div class="space-y-4">
                                                 <div>
-                                                        <label for="dep_name" class="text-lx text_p6">Département*</label>
+                                                        <label for="role_name" class="text-lx text_p6">Désignation*</label>
 
-                                                        <input type="text" name ="dep_name" id="dep_name" 
-                                                            value = "{{ $departement ? $departement->dep_name:'' }}" 
+                                                        <input type="text" name ="role_name" id="role_name" 
+                                                            value = "{{ $memberRole ? $memberRole->role_name:'' }}" 
                                                             class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md " 
                                                             placeholder="Département..."
                                                         />
 
                                                         @if($errors->any())
-                                                                <p class = "error-txt">{{ $errors->first('dep_name') }}</p>
+                                                                <p class = "error-txt">{{ $errors->first('role_name') }}</p>
                                                         @endif
-                                                </div>
-                                               
+                                                </div> 
+                                                <div>       
+                                                        <label for="dep_id" class="text-lx text_p6">Département*</label>
+                                                        <select name = "dep_id" id = "dep_id" 
+                                                                class="border rounded-md border-gray-300 text-gray-600 bg-white 
+                                                                hover:border-gray-400 focus:outline-none appearance-none !m-0 !ml-2">
 
-                                                <input class = "hidden" type="number" name = "dep_id" 
-                                                    value = "{{ $departement ? $departement->dep_id:'' }}"
+                                                                <option></option>
+
+                                                                @if(isset($departements))
+                                                                        @foreach($departements as $departement)
+                                                                                @if ($departement->dep_id == $dep_id)
+                                                                                        <option value = "{{ $departement->dep_id }}" selected>
+                                                                                                {{ $departement->dep_name }}
+                                                                                        </option>
+                                                                                @else
+                                                                                        <option value = "{{ $departement->dep_id }}">
+                                                                                                {{ $departement->dep_name }}
+                                                                                        </option>
+                                                                                @endif
+                                                                        @endforeach
+                                                                @endif
+                                                        </select>
+                                                </div>
+
+                                                <input class = "hidden" type="number" name = "memberRole_id" 
+                                                    value = "{{ $memberRole ? $memberRole->memberRole_id:'' }}"
                                                 >
                                                 
                                                 @if($formView === 'create')

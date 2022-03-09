@@ -11,4 +11,8 @@ class departement extends Model
 
     protected $fillable = ['dep_name'];
     protected $primaryKey = 'dep_id';
+
+    public function memberRole(){
+        return $this->hasMany(memberRole::class);
+    }
 }
