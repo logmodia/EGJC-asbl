@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\memberRole;
-use App\Models\departement;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Models\memberCategory;
 
-class MemberRolesController extends Controller
+class MemberCategoriesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,8 @@ class MemberRolesController extends Controller
      */
     public function index()
     {
-        return view('layouts.features.boards.board_memberRole')
-        ->with('memberRoles',memberRole::orderBy('role_name')->get());
+        return view('layouts.features.boards.board_memberCategory')
+        ->with('memberCategories',memberCategory::orderBy('categ_name')->get());
     }
 
     /**
@@ -28,13 +27,9 @@ class MemberRolesController extends Controller
     public function create()
     {
         //Used to select the corresponding form view when you call the form for create
-        $memberRole=[];
+        $memberCategory=[];
         $formView ='create';
-
-        return view('layouts.features.forms.form_memberRole',compact([
-            'formView'=>'formView',
-            'memberRole'=>'memberRole',
-        ]));
+        return view('layouts.features.forms.form_memberCategory',compact(['formView'=>'formView', 'memberCategory'=>'memberCategory']));
     }
 
     /**
@@ -46,11 +41,11 @@ class MemberRolesController extends Controller
     public function store(Request $request)
     {
         $request->validate([ //input fields have not to be empty
-            'role_name'=>['required','unique:member_roles','min:1'],
+            'categ_name'=>['required','unique:member_categories', 'max:80','min:1'],
         ]);
 
-        memberRole::create([
-            'role_name'=>Str::ucfirst($request->role_name),
+        memberCategory::create([
+            'categ_name'=>Str::ucfirst($request->categ_name),
         ]);
         
         
@@ -60,10 +55,10 @@ class MemberRolesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\memberRole  $memberRole
+     * @param  \App\Models\memberCategory  $memberCategory
      * @return \Illuminate\Http\Response
      */
-    public function show(memberRole $memberRole)
+    public function show(memberCategory $memberCategory)
     {
         //
     }
@@ -71,22 +66,19 @@ class MemberRolesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\memberRole  $memberRole
+     * @param  \App\Models\memberCategory  $memberCategory
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
         //Used to select the corresponding form view when you call the form for edit
-        $memberRole = memberRole::findOrfail($id);
+        $memberCategory = memberCategory::findOrfail($id);
         $formView ='edit';
-        $cancelRoute = route('memberRole_all');
+        $cancelRoute = route('memberCategory_all');
 
-        $departements = departement::orderBy("dep_name")->get();
-        $dep_id = $memberRole->dep_id;
-
-        return view('layouts.features.forms.form_memberRole',
+        return view('layouts.features.forms.form_memberCategory',
         compact([
-            'memberRole'=>'memberRole',
+            'memberCategory'=>'memberCategory',
             'formView'=>'formView',
             'cancelRoute'=>'cancelRoute'
         ]));
@@ -96,23 +88,23 @@ class MemberRolesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\memberRole  $memberRole
+     * @param  \App\Models\memberCategory  $memberCategory
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request)
     {
         $request->validate([ //input fields have not to be empty
-            'role_name'=>['required','min:1'],
+            'categ_name'=>['required','max:80','min:1'],
         ]);
 
-        $id = $request->memberRole_id;
-        $memberRole = memberRole::where('memberRole_id',$id)->firstOrFail();
+        $id = $request->memberCateg_id;
+        $memberCategory = memberCategory::where('memberCateg_id',$id)->firstOrFail();
 
-        $memberRole->update([
-            'role_name'=>Str::ucfirst($request->role_name),
+        $memberCategory->update([
+            'categ_name'=>Str::ucfirst($request->categ_name),
         ]);
         
-        $route = route('memberRole_all');
+        $route = route('memberCategory_all');
 
         return redirect()->back()
         ->with('success','updated')
@@ -122,13 +114,13 @@ class MemberRolesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\memberRole  $memberRole
+     * @param  \App\Models\memberCategory  $memberCategory
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        memberRole::destroy($id);
+        memberCategory::destroy($id);
 
-        return redirect()->action([MemberRolesController::class,'index']);
+        return redirect()->action([MemberCategoriesController::class,'index']);
     }
 }

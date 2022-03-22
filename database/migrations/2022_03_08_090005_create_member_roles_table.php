@@ -16,7 +16,6 @@ class CreateMemberRolesTable extends Migration
         Schema::create('member_roles', function (Blueprint $table) {
             $table->id('memberRole_id');
             $table->string('role_name')->unique()->notnull();
-            $table->foreignId('dep_id')->references('dep_id')->on('departements')->onDelete('cascade');
             $table->timestamps();
         });
     }

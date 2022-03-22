@@ -13,7 +13,8 @@ class memberRole extends Model
     protected $fillable = ['role_name','dep_id'];
     protected $primaryKey = 'memberRole_id';
 
-    public function departement(){
-        return $this->belongsTo(departement::class);
+    public function members(){
+        return $this->belongsToMany(member::class, 'departement_member','memberRole_id','member_id')
+        ->withPivot('id','startdate','enddate','active','member_id','dep_id','memberRole_id');
     }
 }

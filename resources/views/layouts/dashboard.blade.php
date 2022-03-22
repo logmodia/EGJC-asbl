@@ -3,10 +3,12 @@
 @section('content0')
 
 <div x-data="{ sidebarOpen: false }" class="flex bg-indigo-50 mb-10">
-    <div :class="sidebarOpen ? 'block' : 'hidden'" @click="sidebarOpen = false" class="fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden"></div>
+    <div :class="sidebarOpen ? 'block' : 'hidden'" @click="sidebarOpen = false" 
+        class="fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden"></div>
 
     <!--------------------------------------- Menu ---------------------------------------------------->
-    <div  :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'" class="fixed z-30 inset-y-0 left-0 w-64 transition duration-300 transform bg-gray-900 overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
+    <div  :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'" 
+        class="fixed z-30 inset-y-0 left-0 w-64 transition duration-300 transform bg-gray-900 overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
         
         <div class="flex items-center justify-center mt-8 border-b-4 pb-2">
             <div class="flex items-center">
@@ -76,16 +78,28 @@
                     text-gray-100 hover:text-amber-400 cursor-pointer">
 
                     <ion-icon name="newspaper-outline"></ion-icon>    
-                    <span class="mx-3 pr-8 flex-1 w-64">Actualité</span>
+                    <span class="mx-3 pr-8 flex-1 w-64">Communiqués</span>
                     <ion-icon name="chevron-forward-outline"></ion-icon>
 
                 </div>
 
                 <div x-show = "oppenNews" x-data = "{oppen_NewsCategory : false}">
+
+                    <div class = "px-6">
+                        <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+                            href="{{ route('communique_all') }}">
+                            <ion-icon name="list-outline"></ion-icon>
+                            <span class="mx-3">Tous les communiqués</span>
+                        </a>
+                        <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+                            href="{{Route('communique_create')}}">
+                            <ion-icon name="add-circle-outline"></ion-icon>
+                            <span class="mx-3">Nouveau communiqué</span>>
+                        </a>
+                    </div>
                     
                     <!-------------------- News category ------------------>
-                    <div x-on:click = "oppen_NewsCategory=!oppen_NewsCategory" 
-                        class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 
+                    <div class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 
                         text-gray-100 hover:text-amber-400 cursor-pointer">
 
                         <ion-icon name="apps-outline"></ion-icon>
@@ -93,7 +107,7 @@
 
                     </div>
 
-                    <div x-show = "oppen_NewsCategory" class = "px-6">
+                    <div class = "px-6">
                         <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
                             href="{{ route('newscategory_all') }}">
                             <ion-icon name="list-outline"></ion-icon>
@@ -113,35 +127,77 @@
 
             <div x-data = "{oppen_departement : false}" >
                 <div x-on:click = "oppen_departement=!oppen_departement" 
-                    class="flex items-center mt-4 py-2 px-6 text-gray-500 bg-gray-700 bg-opacity-25 text-gray-100 hover:text-amber-400 cursor-pointer">
+                    class="flex items-center mt-4 py-2 px-6 text-gray-500 bg-gray-700 bg-opacity-25 text-gray-100 
+                    hover:text-amber-400 cursor-pointer">
                     <ion-icon name="keypad"></ion-icon>    
                     <span class="mx-3 pr-8 flex-1 w-64">Département</span>
                     <ion-icon name="chevron-forward-outline"></ion-icon>
                 </div>
                 <div x-show = "oppen_departement">
-                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
-                        href="{{ route('departement_all') }}">
+                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 
+                        hover:text-gray-100" href="{{ route('departement_all') }}">
                         <ion-icon name="list-outline"></ion-icon>
                         <span class="mx-3">Tous les départements</span>
                     </a>
-                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
-                        href="{{Route('departement_create')}}">
+                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 
+                        hover:text-gray-100" href="{{Route('departement_create')}}">
                         <ion-icon name="add-circle-outline"></ion-icon>
                         <span class="mx-3">Nouveau département</span>
                     </a>
 
-                    <div class="flex items-center mt-4 py-2 px-6 text-gray-500 bg-gray-700 bg-opacity-25 text-gray-100 hover:text-amber-400 cursor-pointer">
+                    <div class="flex items-center mt-4 py-2 px-6 text-gray-500 bg-gray-700 bg-opacity-25 text-gray-100 
+                        hover:text-amber-400">
                         <span class="mx-3 pr-8 flex-1 w-64">Roles</span>
                     </div>
-                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
-                        href="{{ route('memberRole_all') }}">
+                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 
+                        hover:text-gray-100" href="{{ route('memberRole_all') }}">
                         <ion-icon name="list-outline"></ion-icon>
                         <span class="mx-3">Tous les rôles</span>
                     </a>
-                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 
+                        hover:bg-opacity-25 hover:text-gray-100"
                         href="{{Route('memberRole_create')}}">
                         <ion-icon name="add-circle-outline"></ion-icon>
                         <span class="mx-3">Nouveau rôle</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!--------------------------------------- Members ------------------------------------>
+
+            <div x-data = "{oppen_members : false}" >
+                <div x-on:click = "oppen_members=!oppen_members" 
+                    class="flex items-center mt-4 py-2 px-6 text-gray-500 bg-gray-700 bg-opacity-25 text-gray-100 hover:text-amber-400 cursor-pointer">
+                    <ion-icon name="people-outline"></ion-icon>    
+                    <span class="mx-3 pr-8 flex-1 w-64">Membres</span>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </div>
+                <div x-show = "oppen_members">
+                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 
+                        hover:bg-opacity-25 hover:text-gray-100" href="{{ route('member_all') }}">
+                        <ion-icon name="list-outline"></ion-icon>
+                        <span class="mx-3">Les membres inscrits</span>
+                    </a>
+                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 
+                        hover:bg-opacity-25 hover:text-gray-100" href="{{Route('member_create')}}">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                        <span class="mx-3">Nouveau membre</span>
+                    </a>
+
+                    <div class="flex items-center mt-4 py-2 px-6 text-gray-500 bg-gray-700 bg-opacity-25 text-gray-100 
+                        hover:text-amber-400">
+                        <span class="mx-3 pr-8 flex-1 w-64">Catégorie</span>
+                    </div>
+                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 
+                        hover:bg-opacity-25 hover:text-gray-100" href="{{ route('memberCategory_all') }}">
+                        <ion-icon name="list-outline"></ion-icon>
+                        <span class="mx-3">Toutes les catégories</span>
+                    </a>
+                    <a class="flex items-center mt-1 py-0 pl-10 text-gray-500 hover:bg-gray-700 
+                        hover:bg-opacity-25 hover:text-gray-100" href="{{Route('memberCategory_create')}}">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                        <span class="mx-3">Nouvelle catégorie</span>
                     </a>
                 </div>
 
@@ -153,7 +209,7 @@
 
     <!--------------------------------------- Content ---------------------------------------------------->
 
-    <div class="flex-1 flex flex-col">
+    <div class="flex-1 flex-col">
         <header class="flex justify-between items-center py-5 px-6 bg-white border-b-4 border-gray-500">
             <div class="flex items-center">
                 <button @click="sidebarOpen = true" class="text-gray-500 focus:outline-none lg:hidden">
@@ -190,6 +246,7 @@
                 </div>
             </div>
         </header>
+        
         @yield('content1')
         
     </div>

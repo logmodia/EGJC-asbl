@@ -29,7 +29,10 @@ class NewscategoryController extends Controller
         //Used to select the corresponding form view when you call the form for create
         $newscategory=[];
         $formView ='create';
-        return view('layouts.features.forms.form_newscategory',compact(['formView'=>'formView', 'newscategory'=>'newscategory']));
+        return view('layouts.features.forms.form_newscategory',compact([
+            'formView'=>'formView',
+            'newscategory'=>'newscategory'
+        ]));
     }
 
     /**
@@ -94,13 +97,13 @@ class NewscategoryController extends Controller
     public function update(Request $request, newscategory $newscategory)
     {
         $request->validate([ //input fields have not to be empty
-            'name'=>['required','max:30','min:1'],
+            'name'=>['required','unique:newscategories','max:30','min:1'],
         ]);
 
         $id = $request->id;
-        $weektopic = newscategory::where('id',$id)->firstOrFail();
+        $newscategory = newscategory::where('id',$id)->firstOrFail();
 
-        $weektopic->update([
+        $newscategory->update([
             'name'=>Str::ucfirst($request->name),
         ]);
 

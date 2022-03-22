@@ -1,11 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\AssignMemberRole;
+use App\Http\Controllers\MembersController;
 use App\Http\Controllers\WeektopicController;
+use App\Http\Controllers\CommuniquesController;
 use App\Http\Controllers\MemberRolesController;
 use App\Http\Controllers\YearvisionsController;
 use App\Http\Controllers\DepartementsController;
 use App\Http\Controllers\NewscategoryController;
+use App\Http\Controllers\MemberCategoriesController;
 use App\Http\Controllers\viewcontroller\newsController;
 use App\Http\Controllers\viewcontroller\aboutController;
 use App\Http\Controllers\viewcontroller\eventController;
@@ -93,6 +97,38 @@ Route::get('/memberRole/edit/{id?}',[MemberRolesController::class,'edit'])->name
 Route::post('/memberRole/store',[MemberRolesController::class,'store'])->name('memberRole_store');
 Route::post('/memberRole/update',[MemberRolesController::class,'update'])->name('memberRole_update');
 Route::post('/memberRole/destroy/{id?}',[MemberRolesController::class,'destroy'])->name('memberRole_destroy')->whereNumber('id');
+
+//Member categories -----------------------------------------------------------------------------------
+
+Route::get('/memberCategory/all',[MemberCategoriesController::class,'index'])->name('memberCategory_all');
+Route::get('/memberCategory/create',[MemberCategoriesController::class,'create'])->name('memberCategory_create');
+Route::get('/memberCategory/edit/{id?}',[MemberCategoriesController::class,'edit'])->name('memberCategory_edit')->whereNumber('id');
+
+Route::post('/memberCategory/store',[MemberCategoriesController::class,'store'])->name('memberCategory_store');
+Route::post('/memberCategory/update',[MemberCategoriesController::class,'update'])->name('memberCategory_update');
+Route::post('/memberCategory/destroy/{id?}',[MemberCategoriesController::class,'destroy'])->name('memberCategory_destroy')->whereNumber('id');
+
+//Members -----------------------------------------------------------------------------------
+
+Route::get('/member/all',[MembersController::class,'index'])->name('member_all');
+Route::get('/member/create',[MembersController::class,'create'])->name('member_create');
+Route::get('/member/edit/{id?}',[MembersController::class,'edit'])->name('member_edit')->whereNumber('id');
+
+Route::get('/member/assignrole/{id?}',[MembersController::class,'assignMemberRoles'])->name('assignMemberRole')->whereNumber('id');
+
+Route::post('/member/store',[MembersController::class,'store'])->name('member_store');
+Route::post('/member/update',[MembersController::class,'update'])->name('member_update');
+Route::post('/member/destroy/{id?}',[MembersController::class,'destroy'])->name('member_destroy')->whereNumber('id');
+
+//Communiques -----------------------------------------------------------------------------------
+
+Route::get('/communique/all',[CommuniquesController::class,'index'])->name('communique_all');
+Route::get('/communique/create',[CommuniquesController::class,'create'])->name('communique_create');
+Route::get('/communique/edit/{id?}',[CommuniquesController::class,'edit'])->name('communique_edit')->whereNumber('id');
+
+Route::post('/communique/store',[CommuniquesController::class,'store'])->name('communique_store');
+Route::post('/communique/update',[CommuniquesController::class,'update'])->name('communique_update');
+Route::post('/communique/destroy/{id?}',[CommuniquesController::class,'destroy'])->name('communique_destroy')->whereNumber('id');
 
 
 Route::group(['middleware' => ['auth']], function() {

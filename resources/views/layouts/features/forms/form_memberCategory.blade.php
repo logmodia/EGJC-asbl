@@ -5,10 +5,9 @@
                 <x-alertBox/>
         @else
                 @if($formView === 'create')
-                <form class="mb-5" method="post" action = "{{ Route('memberRole_store') }}">
+                <form class="mb-5" method="post" action = "{{ Route('memberCategory_store') }}">
                 @elseif($formView === 'edit')
-                <form class="mb-5" x-data ="{ action : true, confirm : false}" method="post"
-                action = "{{ Route('memberRole_update') }}">
+                <form class="mb-5" x-data ="{ action : true, confirm : false}" method="post" action = "{{ Route('memberCategory_update') }}">
                 @endif
                         @csrf()
                         
@@ -17,31 +16,32 @@
                                         
                                         @if($formView === 'create')
                                             <h1 class="text-center text-2xl font-bold text-gray-500 mb-10 h_3">
-                                                Nouveau rôle
+                                                Nouvelle catégorie
                                             </h1>
                                         @elseif($formView === 'edit')
                                             <h1 class="text-center text-2xl font-bold text-gray-500 mb-10 h_3">
-                                                Modiffier un rôle
+                                                Modiffier une catégorie
                                             </h1>
                                         @endif
                                         
                                         <div class="space-y-4">
                                                 <div>
-                                                        <label for="role_name" class="text-lx text_p6">Désignation*</label>
+                                                        <label for="categ_name" class="text-lx text_p6">Département*</label>
 
-                                                        <input type="text" name ="role_name" id="role_name" 
-                                                            value = "{{ $memberRole ? $memberRole->role_name:'' }}" 
+                                                        <input type="text" name ="categ_name" id="categ_name" 
+                                                            value = "{{ $memberCategory ? $memberCategory->categ_name:'' }}" 
                                                             class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md " 
-                                                            placeholder="Département..."
+                                                            placeholder="Catégorie..."
                                                         />
 
                                                         @if($errors->any())
-                                                                <p class = "error-txt">{{ $errors->first('role_name') }}</p>
+                                                                <p class = "error-txt">{{ $errors->first('categ_name') }}</p>
                                                         @endif
-                                                </div> 
+                                                </div>
+                                               
 
-                                                <input class = "hidden" type="number" name = "memberRole_id" 
-                                                    value = "{{ $memberRole ? $memberRole->memberRole_id:'' }}"
+                                                <input class = "hidden" type="number" name = "memberCateg_id" 
+                                                    value = "{{ $memberCategory ? $memberCategory->memberCateg_id:'' }}"
                                                 >
                                                 
                                                 @if($formView === 'create')

@@ -15,4 +15,9 @@ class departement extends Model
     public function memberRole(){
         return $this->hasMany(memberRole::class);
     }
+    
+    public function members(){
+        return $this->belongsToMany(member::class, 'departement_member','dep_id','member_id')
+        ->withPivot('id','startdate','enddate','active','member_id','dep_id','memberRole_id');
+    }
 }

@@ -44,16 +44,22 @@
                                                 </div>
                                                 <div>
                                                         <label for="details" class="block mb-2 text-lg text_p6">Details</label>
-                                                        <textarea id="details" name="details" cols="30" rows="10" placeholder="Details.." class="w-full font-serif  p-4 text-gray-600 bg-indigo-50 outline-none rounded-md">{{ $yearvision ? $yearvision['details']:'' }}</textarea>
+                                                        <textarea id="details" name="details" cols="30" rows="10" placeholder="Details.." 
+                                                                class="w-full font-serif  p-4 text-gray-600 bg-indigo-50 outline-none rounded-md">
+                                                                {{ $yearvision ? $yearvision['details']:'' }}
+                                                        </textarea>
                                                         @if($errors->any())
                                                                 <p class = "error-txt">{{ $errors->first('subject_prefix') }}</p>
                                                         @endif
                                                 </div>
-                                                <input class = "input-UppCase hidden-input" type="number" name = "yearvision_id" value = "{{ $yearvision ? $yearvision['yearvision_id']:'' }}">
-                                                
+                                                <input class = "input-UppCase hidden-input" type="number" name = "yearvision_id" 
+                                                        value = "{{ $yearvision ? $yearvision['yearvision_id']:'' }}"
+                                                >
                                                 
                                                 @if($formView === 'create')
-                                                        <button type="submit" class=" px-6 py-2 mx-auto block rounded-md text-lg text-indigo-100 bg-indigo-600  ">Ajouter</button>
+                                                        <button type="submit" class=" px-6 py-2 mx-auto block rounded-md text-lg text-indigo-100 bg-indigo-600 ">
+                                                                Ajouter
+                                                        </button>
                                                 @elseif($formView === 'edit')
                                                         <div class = "text-center">
                                                                 <button x-show ="confirm" type="submit" 

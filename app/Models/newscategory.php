@@ -10,4 +10,8 @@ class newscategory extends Model
     use HasFactory;
 
     protected $fillable = ['name'];
+
+    public function communiques(){
+        return $this->hasMany(communique::class);
+    }
 }
